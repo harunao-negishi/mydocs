@@ -10,13 +10,10 @@ theme:
 
 plugins:
   search:
-    lang: 'ja'
-
-#markdown_extensions:
-#    - mdx_math
-#    - pymdownx.highlight
+    lang: ja
 
 markdown_extensions:
+  - admonition
   - pymdownx.highlight:
       use_pygments: true
       noclasses: true
@@ -24,17 +21,13 @@ markdown_extensions:
       linenums: true
   - pymdownx.arithmatex:
       generic: true
+  - pymdownx.superfences
 
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js
 
-extra_javascript: 
-  - http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
-  - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js
-  - javascripts/config.js
-  - https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js
-
-extra_css:
-  - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/default.min.css
-  - https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css
+extra_css: []
 
 nav:
   - トップページ: index.md
