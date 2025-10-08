@@ -1,0 +1,142 @@
+
+site_name: 私の研究ドキュメント
+
+theme:
+  name: material
+  palette:
+    primary: orange
+  features:
+    - navigation.tabs
+
+plugins:
+  search:
+    lang: 'ja'
+
+#markdown_extensions:
+#    - mdx_math
+#    - pymdownx.highlight
+
+markdown_extensions:
+  - pymdownx.highlight:
+      use_pygments: true
+      noclasses: true
+      pygments_style: monokai
+      linenums: true
+  - pymdownx.arithmatex:
+      generic: true
+
+
+extra_javascript: 
+  - http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+  - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js
+  - javascripts/config.js
+  - https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js
+
+extra_css:
+  - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/default.min.css
+  - https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css
+
+nav:
+  - トップページ: index.md
+
+  - mkdocs: 
+      - はじめに: mkdocs/intro.md
+      - 使い方: mkdocs/usage.md
+
+  - remoteSSH:
+      - 始めに: remoteSSH/intro.md
+      - 使い方: remoteSSH/usage.md
+
+  - 量子多体系のための摂動論:
+      - 概要: perturbation/abst.md
+      - グリーン関数: 
+          - グリーン関数と諸性質: perturbation/green/green.md
+          - 温度グリーン関数と諸性質: perturbation/green/tempgreen.md
+          - 遅延・先進グリーン関数: perturbation/green/RAgreen.md
+
+      - 相互作用とファインマンダイアグラム:
+          - 相互作用のグリーン関数: perturbation/fd/interaction.md
+          - ブロッホドミニシスの定理: perturbation/fd/bloch.md
+          - ファインマンダイアグラム: perturbation/fd/fd.md
+          - 自己エネルギーとダイソン方程式: perturbation/fd/dyson.md
+          - 相互作用のFD: perturbation/fd/fd_interaction.md
+
+      - 線形応答理論:
+          - 応答関数の諸性質: perturbation/lrt/rf.md
+          - 電荷感受率: perturbation/lrt/charge.md
+          - 磁気感受率: perturbation/lrt/spin.md
+          - RPA近似: perturbation/lrt/others.md
+
+      - RPA(計算): 
+          - 概要: perturbation/rpa/abst.md
+          - コード解説1 感受率: perturbation/rpa/susceptibility.md
+          - コード解説2 相互作用の導入: perturbation/rpa/interaction.md
+          - コード解説3 自己エネルギー: perturbation/rpa/self-energy.md
+          - コード解説4 グリーン関数: perturbation/rpa/green_function.md
+
+      #- Flex(計算):
+
+  - 基礎固体物理:
+      - 概要: Solid_State_Phys/overview.md
+      - 1. 基礎:
+          - 結晶構造と格子ベクトル: Solid_State_Phys/basics/crystal_lattice.md
+          - 逆格子とブリルアンゾーン: Solid_State_Phys/basics/reciprocal_lattice.md
+          - ブロッホの定理と波動関数: Solid_State_Phys/basics/bloch_theorem.md
+          - バンド構造と有効質量: Solid_State_Phys/basics/band_and_mass.md
+          - フェルミ面と電子密度: Solid_State_Phys/basics/fermi_surface.md
+
+      - 2. 模型:
+          - 自由電子模型: Solid_State_Phys/models/free_electron/overview.md
+          - NFE近似: Solid_State_Phys/models/nearly_free_electron/overview.md
+          - 強束縛模型 (Tight Binding): Solid_State_Phys/models/tight_binding/overview.md
+          - ハバード模型: Solid_State_Phys/models/hubbard/overview.md
+          - 模型の比較と限界: Solid_State_Phys/models/comparison.md
+
+      - 3. 熱・フォノン:
+          - 格子振動とフォノン: Solid_State_Phys/phonon/overview.md
+          - デバイ模型と比熱: Solid_State_Phys/phonon/debye.md
+          - フォノン分散と音速: Solid_State_Phys/phonon/dispersion.md
+          - 熱伝導とフォノン散乱: Solid_State_Phys/phonon/thermal_conductivity.md
+          - 電子−格子相互作用: Solid_State_Phys/phonon/electron_phonon.md
+
+      - 4. 電気特性:
+          - ドリューデ模型とフェルミ液体: Solid_State_Phys/transport/drude.md
+          - 半導体の電子・正孔伝導: Solid_State_Phys/transport/semiconductor.md
+          - ホール効果・磁気抵抗: Solid_State_Phys/transport/hall_effect.md
+          - 光応答・誘電関数: Solid_State_Phys/transport/optical_response.md
+          - 熱電効果とSeebeck係数: Solid_State_Phys/transport/thermoelectric.md
+
+      - 5. 磁性:
+          - スピンと磁気モーメント: Solid_State_Phys/magnetism/spin.md
+          - 常磁性・反磁性・強磁性: Solid_State_Phys/magnetism/types.md
+          - ハイゼンベルグ模型（統計へ橋渡し）: Solid_State_Phys/magnetism/heisenberg.md
+          - スピン波と量子磁性: Solid_State_Phys/magnetism/spinwave.md
+          - 統計的取り扱いと相転移: Solid_State_Phys/magnetism/statistical_link.md
+
+  - 研究で学んだ計算物理シリーズ:
+      - 概要: research/overview.md
+      - 2D 正方格子:
+          - バンド分散: research/square/band.md
+          - 状態密度 (DOS): research/square/dos.md
+          - 充填率と化学ポテンシャル: research/square/filling_mu.md
+          - グリーン関数: research/square/green.md
+          - 感受率とRPA: research/square/rpa.md
+          - FLEX計算: research/square/flex.md
+
+      - 2D ハニカム格子:
+          - バンド分散: research/honeycomb/band.md
+          - DOSとフェルミ準位: research/honeycomb/dos.md
+          - RPA計算結果: research/honeycomb/rpa.md
+          - FLEX解析: research/honeycomb/flex.md
+
+      - DFTとWannier化:
+          - DFT理論と実装: research/dft/overview.md
+          - 実例_VASPからWannier90ワークフロー: research/dft/workflow.md
+          - wannier_hr.datからの再構築: research/dft/wannier_rebuild.md          
+
+
+
+
+
+      
+
