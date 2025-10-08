@@ -16,7 +16,7 @@
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.13">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.21">
     
     
       
@@ -24,7 +24,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.342714a4.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.2a3383ac.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
@@ -45,10 +45,6 @@
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
-    
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/default.min.css">
-    
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
     
     <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -2799,17 +2795,22 @@ $$
 <hr />
 <h2 id="_3">自由グリーン関数の数値解</h2>
 <p>まずは自由系のグリーン関数式のプロットを見てみよう。そのためには</p>
-<pre><code class="language-python">chi_sum = 0
-for wn in matsubara_freqs:
-    for p in range(Nk):
-        for q in range(Nk):
-            chi_sum += 1 / ((wn - epsilon_k[p, q]) * (wn - epsilon_qk[p, q]))
-chi_sum *= (-kb * T) / (Nk**2)
-</code></pre>
+<div class="highlight" style="background: #272822"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">5</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">6</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><code><span style="color: #F8F8F2">chi_sum</span> <span style="color: #FF4689">=</span> <span style="color: #AE81FF">0</span>
+<span style="color: #66D9EF">for</span> <span style="color: #F8F8F2">wn</span> <span style="color: #FF4689">in</span> <span style="color: #F8F8F2">matsubara_freqs:</span>
+    <span style="color: #66D9EF">for</span> <span style="color: #F8F8F2">p</span> <span style="color: #FF4689">in</span> <span style="color: #F8F8F2">range(Nk):</span>
+        <span style="color: #66D9EF">for</span> <span style="color: #F8F8F2">q</span> <span style="color: #FF4689">in</span> <span style="color: #F8F8F2">range(Nk):</span>
+            <span style="color: #F8F8F2">chi_sum</span> <span style="color: #FF4689">+=</span> <span style="color: #AE81FF">1</span> <span style="color: #FF4689">/</span> <span style="color: #F8F8F2">((wn</span> <span style="color: #FF4689">-</span> <span style="color: #F8F8F2">epsilon_k[p,</span> <span style="color: #F8F8F2">q])</span> <span style="color: #FF4689">*</span> <span style="color: #F8F8F2">(wn</span> <span style="color: #FF4689">-</span> <span style="color: #F8F8F2">epsilon_qk[p,</span> <span style="color: #F8F8F2">q]))</span>
+<span style="color: #F8F8F2">chi_sum</span> <span style="color: #FF4689">*=</span> <span style="color: #F8F8F2">(</span><span style="color: #FF4689">-</span><span style="color: #F8F8F2">kb</span> <span style="color: #FF4689">*</span> <span style="color: #F8F8F2">T)</span> <span style="color: #FF4689">/</span> <span style="color: #F8F8F2">(Nk</span><span style="color: #FF4689">**</span><span style="color: #AE81FF">2</span><span style="color: #F8F8F2">)</span>
+</code></pre></div></td></tr></table></div>
 <h2 id="_4">関連トピック</h2>
 <ul>
-<li><a href="spin_susceptibility.md">スピン感受率</a></li>
-<li><a href="rpa.md">RPAとは？</a></li>
+<li><a href="../spin_susceptibility/">スピン感受率</a></li>
+<li><a href="../rpa/">RPAとは？</a></li>
 </ul>
 
 
@@ -2859,18 +2860,14 @@ chi_sum *= (-kb * T) / (Nk**2)
     
     
       
-      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs"], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs"], "search": "../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
       
-        <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script src="../../../javascripts/mathjax.js"></script>
       
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js"></script>
-      
-        <script src="../../../javascripts/config.js"></script>
-      
-        <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
       
     
   </body>
