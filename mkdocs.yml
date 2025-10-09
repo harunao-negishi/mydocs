@@ -27,8 +27,8 @@ markdown_extensions:
   - admonition
   - pymdownx.highlight:
       use_pygments: true
-      noclasses: true
-      pygments_style: dracula
+      noclasses: false
+      pygments_style: monokai
       linenums: true
   - pymdownx.arithmatex:
       generic: true
@@ -38,18 +38,37 @@ extra_javascript:
   - javascripts/mathjax.js
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js
 
-extra_css: []
+extra_css:
+    - extra.css
 
 nav:
   - トップページ: index.md
 
-  - mkdocs: 
-      - はじめに: mkdocs/intro.md
-      - 使い方: mkdocs/usage.md
-
-  - remoteSSH:
-      - 始めに: remoteSSH/intro.md
-      - 使い方: remoteSSH/usage.md
+  - プログラミング:
+      - MkDocs:
+          - はじめに: programming/mkdocs/intro.md
+          - 使い方: programming/mkdocs/usage.md
+          - Tips集: programming/mkdocs/tips.md
+      - Remote SSH:
+          - はじめに: programming/remoteSSH/intro.md
+          - 接続設定: programming/remoteSSH/setup.md
+          - 使い方: programming/remoteSSH/usage.md
+          - Tips集: programming/remoteSSH/tips.md
+      - Git / GitHub:
+          - はじめに: programming/git/intro.md
+          - 基本操作: programming/git/basics.md
+          - リモートとGitHub: programming/git/github.md
+          - ブランチと運用: programming/git/branching.md
+          - トラブル対応: programming/git/troubleshooting.md
+          - 家／研究室ワークフロー: programming/git/workflow.md
+      - Python:
+          - はじめに: programming/python/intro.md
+          - 使い方: programming/python/usage.md
+          - Tips集: programming/python/tips.md
+      - VS Code:
+          - はじめに: programming/vscode/intro.md
+          - 使い方: programming/vscode/usage.md
+          - Tips集: programming/vscode/tips.md
 
   - 量子多体系のための摂動論:
       - 概要: perturbation/abst.md
