@@ -1,0 +1,12 @@
+/* コードボックス内の文字色を黒に強制 */
+.md-typeset pre code, .md-typeset code {
+  color: #037c5e !important;
+}
+
+/* 行番号だけMonokai色 */
+.md-typeset .highlighttable .linenos, .md-typeset .highlighttable .lineno {
+  color: #2d280a !important;
+  background: #c5be9f !important;
+  font-weight: normal !important;
+  opacity: 0.7;
+}
