@@ -3,10 +3,21 @@ site_name: 私の研究ドキュメント
 
 theme:
   name: material
-  palette:
-    primary: orange
   features:
+    - content.code.copy
     - navigation.tabs
+  palette:
+    - scheme: default
+      primary: indigo
+      toggle:
+        icon: material/weather-night
+        name: ダークモードへ
+    - scheme: slate
+      primary: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: ライトモードへ
+    
 
 plugins:
   search:
@@ -17,7 +28,7 @@ markdown_extensions:
   - pymdownx.highlight:
       use_pygments: true
       noclasses: true
-      pygments_style: monokai
+      pygments_style: dracula
       linenums: true
   - pymdownx.arithmatex:
       generic: true
@@ -106,10 +117,11 @@ nav:
           - スピン波と量子磁性: Solid_State_Phys/magnetism/spinwave.md
           - 統計的取り扱いと相転移: Solid_State_Phys/magnetism/statistical_link.md
 
-  - 研究で学んだ計算物理シリーズ:
+  - Research:
       - 概要: research/overview.md
       - 2D 正方格子:
           - バンド分散: research/square/band.md
+          - 多軌道に拡張する: research/square/multiband.md
           - 状態密度 (DOS): research/square/dos.md
           - 充填率と化学ポテンシャル: research/square/filling_mu.md
           - グリーン関数: research/square/green.md
