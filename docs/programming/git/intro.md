@@ -18,6 +18,8 @@
 # Gitのバージョン確認
 git --version
 ```
+これでバージョンが出るようなら、インストール成功です！！
+
 
 ---
 ## 始め方（VS Code編）
@@ -30,6 +32,7 @@ git --version
 ### GitHub連携の始め方
 1. GitHubで新しいリポジトリを作成
 2. VS Codeのターミナルで以下のコマンドを実行
+
 
 ```powershell
 # ローカルリポジトリをGitHubに接続

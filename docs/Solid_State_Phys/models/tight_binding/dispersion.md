@@ -20,7 +20,7 @@ E_\pm(\mathbf k) = \epsilon_0 \pm t\sqrt{1 + 4\cos\frac{k_x a}{2}
             \left(\cos\frac{k_x a}{2} + \cos\frac{\sqrt{3}k_y a}{2}\right)}.
 $$
 
-![](../images/tb_graphene_band.png)
+> ※ グラフェンのバンド図は準備中。将来的に図を追加予定。
 
 → ディラック点 $K$ で線形分散。
 

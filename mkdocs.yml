@@ -42,11 +42,12 @@ extra_css:
     - extra.css
 
 nav:
-  - トップページ: index.md
-
-  - プログラミング:
+    - トップページ: index.md
+    - ノート: notes.md
+    - プログラミング:
       - MkDocs:
           - はじめに: programming/mkdocs/intro.md
+          - 基本運用: programming/mkdocs/basics.md
           - 使い方: programming/mkdocs/usage.md
           - Tips集: programming/mkdocs/tips.md
       - Remote SSH:
@@ -63,6 +64,7 @@ nav:
           - 家／研究室ワークフロー: programming/git/workflow.md
       - Python:
           - はじめに: programming/python/intro.md
+          - 基本運用: programming/python/basics.md
           - 使い方: programming/python/usage.md
           - Tips集: programming/python/tips.md
       - VS Code:
@@ -70,7 +72,12 @@ nav:
           - 使い方: programming/vscode/usage.md
           - Tips集: programming/vscode/tips.md
 
-  - 量子多体系のための摂動論:
+    - 授業ノート:
+      - 非線形物理:
+          - 第1回: Classes/non-linear-phys/lec01.md
+          - 第2回: Classes/non-linear-phys/lec02.md
+
+    - 量子多体系のための摂動論:
       - 概要: perturbation/abst.md
       - グリーン関数: 
           - グリーン関数と諸性質: perturbation/green/green.md
@@ -92,14 +99,14 @@ nav:
 
       - RPA(計算): 
           - 概要: perturbation/rpa/abst.md
+          - RPAの基礎: perturbation/rpa/rpa.md
           - コード解説1 感受率: perturbation/rpa/susceptibility.md
+          - スピン感受率メモ: perturbation/rpa/spin_susceptibility.md
           - コード解説2 相互作用の導入: perturbation/rpa/interaction.md
           - コード解説3 自己エネルギー: perturbation/rpa/self-energy.md
           - コード解説4 グリーン関数: perturbation/rpa/green_function.md
 
-      #- Flex(計算):
-
-  - 基礎固体物理:
+    - 基礎固体物理:
       - 概要: Solid_State_Phys/overview.md
       - 1. 基礎:
           - 結晶構造と格子ベクトル: Solid_State_Phys/basics/crystal_lattice.md
@@ -109,9 +116,14 @@ nav:
           - フェルミ面と電子密度: Solid_State_Phys/basics/fermi_surface.md
 
       - 2. 模型:
+          - 模型全体の俯瞰: Solid_State_Phys/models/overview.md
           - 自由電子模型: Solid_State_Phys/models/free_electron/overview.md
           - NFE近似: Solid_State_Phys/models/nearly_free_electron/overview.md
-          - 強束縛模型 (Tight Binding): Solid_State_Phys/models/tight_binding/overview.md
+          - 強束縛模型 (Tight Binding):
+              - 概要: Solid_State_Phys/models/tight_binding/overview.md
+              - 原子軌道からの導出: Solid_State_Phys/models/tight_binding/derivation.md
+              - 分散関係の例: Solid_State_Phys/models/tight_binding/dispersion.md
+              - 局在性とバンド幅: Solid_State_Phys/models/tight_binding/localization.md
           - ハバード模型: Solid_State_Phys/models/hubbard/overview.md
           - 模型の比較と限界: Solid_State_Phys/models/comparison.md
 
@@ -136,7 +148,7 @@ nav:
           - スピン波と量子磁性: Solid_State_Phys/magnetism/spinwave.md
           - 統計的取り扱いと相転移: Solid_State_Phys/magnetism/statistical_link.md
 
-  - Research:
+    - Research:
       - 概要: research/overview.md
       - 2D 正方格子:
           - バンド分散: research/square/band.md
