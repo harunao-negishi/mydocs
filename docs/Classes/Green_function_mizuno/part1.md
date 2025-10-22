@@ -122,10 +122,10 @@ G^{R}_{\alpha\beta}(r,r',t)=-\,i\,\theta(t)\,
 $$
 
 消滅演算子の時間微分は
+
 $$
 i\frac{\partial}{\partial t}c_{r\alpha}(t)=[c_{r\alpha}(t),H]
-= \sum_{r''\gamma}(t_{rr'',\alpha\gamma}-\mu\,\delta_{rr''}\delta_{\alpha\gamma})\,c_{r''\gamma}(t)
-+ e^{iHt}[c_{r\alpha},H_{\mathrm{int}}]e^{-iHt}
+= \sum_{r''\gamma}(t_{rr'',\alpha\gamma}-\mu\,\delta_{rr''}\delta_{\alpha\gamma})\,c_{r''\gamma}(t)+ e^{iHt}[c_{r\alpha},H_{\mathrm{int}}]e^{-iHt}
 \tag{1.13}
 $$
 
@@ -136,8 +136,7 @@ $$
 i\frac{\partial}{\partial t}G^{R}_{\alpha\beta}(r,r',t)
 &=\sum_{r''\gamma}(t_{rr'',\alpha\gamma}-\mu\,\delta_{rr''}\delta_{\alpha\gamma})
 \,G^{R}_{\gamma\beta}(r'',r',t)\\
-&\quad -\,i\Big\langle T_t\,e^{iHt}[c_{r\alpha},H_{\mathrm{int}}]e^{-iHt}\,c^{\dagger}_{r'\beta}\Big\rangle
-+ \delta_{rr'}\delta_{\alpha\beta}\delta(t).
+&\quad -\,i\Big\langle T_t\,e^{iHt}[c_{r\alpha},H_{\mathrm{int}}]e^{-iHt}\,c^{\dagger}_{r'\beta}\Big\rangle + \delta_{rr'}\delta_{\alpha\beta}\delta(t).
 \end{aligned}
 \tag{1.14}
 $$
@@ -145,7 +144,7 @@ $$
 ここで（天下り的に）自己エネルギー $\Sigma$ を導入：
 
 $$
--\,i\Big\langle T_t\,e^{iHt}[c_{r\alpha},H_{\mathrm{int}}]e^{-iHt}\,c^{\dagger}_{r'\beta}\Big\rangle
+-\,i\Big\langle T_t\,e^{iHt}[c_{r\alpha},H_{\mathrm{int}}]e^{-iHt}\,c^{\dagger}_{r'\beta}\Big\rangle\\
 =\sum_{r''\gamma}\int\!dt'\;\Sigma^{R}_{\alpha\gamma}(r,r'',t-t')\,G^{R}_{\gamma\beta}(r'',r',t')
 \tag{1.15}
 $$
@@ -154,9 +153,8 @@ $$
 
 $$
 \sum_{r''\gamma}\!\int\!dt'\,
-\Big[\big(i\partial_t+\mu\big)\delta_{rr''}\delta(t-t')\delta_{\alpha\gamma}
-- t_{rr'',\alpha\gamma}\delta(t-t')-\Sigma^{R}_{\alpha\gamma}(r,r'',t-t')\Big]
-G^{R}_{\gamma\beta}(r'',r',t')
+\Big[\big(i\partial_t+\mu\big)\delta_{rr''}\delta(t-t')\delta_{\alpha\gamma} - t_{rr'',\alpha\gamma}\delta(t-t')-\Sigma^{R}_{\alpha\gamma}(r,r'',t-t')\Big]
+G^{R}_{\gamma\beta}(r'',r',t')\\
 =\delta_{\alpha\beta}\delta_{rr'}\delta(t).
 \tag{1.16}
 $$
@@ -177,7 +175,7 @@ $$
 すなわち行列表記で
 
 $$
-\big[(\omega+\mu)\,I-\varepsilon_k-\Sigma^{R}(k,\omega)\big]\;G^{R}(k,\omega)=I
+\big[(\omega+\mu)\,I-\varepsilon_k-\Sigma^{R}(k,\omega)\big]\;G^{R}(k,\omega)=I\\
 \quad\Rightarrow\quad
 G^{R}(k,\omega)=\big[(\omega+\mu)\,I-\varepsilon_k-\Sigma^{R}(k,\omega)\big]^{-1}.
 \tag{1.20}
@@ -256,11 +254,9 @@ $$
 さらに $1/(x\pm i\delta)=\mathcal{P}(1/x)\mp i\pi\delta(x)$ より
 
 $$
-G^{R}_{\alpha\beta}(k,\omega)=\mathcal{P}\!\int d\omega'\frac{A_{\alpha\beta}(k,\omega')}{\omega-\omega'}
-- i\pi A_{\alpha\beta}(k,\omega),
+G^{R}_{\alpha\beta}(k,\omega)=\mathcal{P}\!\int d\omega'\frac{A_{\alpha\beta}(k,\omega')}{\omega-\omega'} - i\pi A_{\alpha\beta}(k,\omega),
 \quad
-G^{A}_{\alpha\beta}(k,\omega)=\mathcal{P}\!\int d\omega'\frac{A_{\alpha\beta}(k,\omega')}{\omega-\omega'}
-+ i\pi A_{\alpha\beta}(k,\omega),
+G^{A}_{\alpha\beta}(k,\omega)=\mathcal{P}\!\int d\omega'\frac{A_{\alpha\beta}(k,\omega')}{\omega-\omega'} + i\pi A_{\alpha\beta}(k,\omega),
 \tag{1.31–1.32}
 $$
 
@@ -344,8 +340,7 @@ $$
 
 $$
 \frac{\partial}{\partial\tau}c_{r\alpha}(\tau)=-[c_{r\alpha}(\tau),H]
-=-\sum_{r''\gamma}(t_{rr'',\alpha\gamma}-\mu\,\delta_{rr''}\delta_{\alpha\gamma})\,c_{r''\gamma}(\tau)
-- e^{\tau H}[c_{r\alpha},H_{\mathrm{int}}]e^{-\tau H}
+=-\sum_{r''\gamma}(t_{rr'',\alpha\gamma}-\mu\,\delta_{rr''}\delta_{\alpha\gamma})\,c_{r''\gamma}(\tau) - e^{\tau H}[c_{r\alpha},H_{\mathrm{int}}]e^{-\tau H}
 \tag{1.46}
 $$
 
@@ -355,8 +350,7 @@ $$
 \begin{aligned}
 \frac{\partial}{\partial\tau}G_{\alpha\beta}(r,r',\tau)
 &=-\sum_{r''\gamma}(t_{rr'',\alpha\gamma}-\mu\,\delta_{rr''}\delta_{\alpha\gamma})\,G_{\gamma\beta}(r'',r',\tau)\\
-&\quad -\Big\langle T_{\tau}\,e^{\tau H}[c_{r\alpha},H_{\mathrm{int}}]e^{-\tau H}\,c^{\dagger}_{r'\beta}\Big\rangle
-- \delta_{\alpha\beta}\delta_{rr'}\delta(\tau).
+&\quad -\Big\langle T_{\tau}\,e^{\tau H}[c_{r\alpha},H_{\mathrm{int}}]e^{-\tau H}\,c^{\dagger}_{r'\beta}\Big\rangle - \delta_{\alpha\beta}\delta_{rr'}\delta(\tau).
 \end{aligned}
 \tag{1.47}
 $$
@@ -373,9 +367,8 @@ $$
 
 $$
 \sum_{r''\gamma}\!\int\!d\tau'\,
-\Big[\big(-\partial_\tau+\mu\big)\delta_{rr''}\delta(\tau-\tau')\delta_{\alpha\gamma}
-- t_{rr'',\alpha\gamma}\delta(\tau-\tau')-\Sigma_{\alpha\gamma}(r,r'',\tau-\tau')\Big]
-G_{\gamma\beta}(r'',r',\tau')
+\Big[\big(-\partial_\tau+\mu\big)\delta_{rr''}\delta(\tau-\tau')\delta_{\alpha\gamma} - t_{rr'',\alpha\gamma}\delta(\tau-\tau')-\Sigma_{\alpha\gamma}(r,r'',\tau-\tau')\Big]
+G_{\gamma\beta}(r'',r',\tau')\\
 =\delta_{\alpha\beta}\delta_{rr'}\delta(\tau).
 \tag{1.50}
 $$
