@@ -7,10 +7,10 @@
 多体ハミルトニアンを以下の形で定める：
 
 $$
-H=\underbrace{\sum_{rr',\,\alpha\beta} t_{rr',\alpha\beta}\,c^{\dagger}_{r\alpha}c_{r'\beta}}_{H_0}
+H=\underbrace{\sum_{rr', \alpha\beta} t_{rr',\alpha\beta} c^{\dagger}_{r\alpha}c_{r'\beta}}_{H_0}
  +
 \underbrace{\frac{1}{4}\sum_{r}\sum_{\alpha\beta\gamma\lambda}
-U_{\alpha\beta\gamma\lambda}\,c^{\dagger}_{r\alpha}c^{\dagger}_{r\lambda}c_{r\gamma}c_{r\beta}}_{H_{\mathrm{int}}}
+U_{\alpha\beta\gamma\lambda} c^{\dagger}_{r\alpha}c^{\dagger}_{r\lambda}c_{r\gamma}c_{r\beta}}_{H_{\mathrm{int}}}
 $$
 
 (1.1)
@@ -18,10 +18,10 @@ $$
 波数空間では
 
 $$
-H=\underbrace{\sum_{k,\,\alpha\beta}\varepsilon_{k,\alpha\beta}\,c^{\dagger}_{k\alpha}c_{k\beta}}_{H_0}
+H=\underbrace{\sum_{k, \alpha\beta}\varepsilon_{k,\alpha\beta} c^{\dagger}_{k\alpha}c_{k\beta}}_{H_0}
  +
 \underbrace{\frac{1}{4}\sum_{k' q}\sum_{\alpha\beta\gamma\lambda}
-U_{\alpha\beta\gamma\lambda}\,c^{\dagger}_{k\alpha}c^{\dagger}_{k'+q,\lambda}c_{k'\gamma}c_{k+q,\beta}}_{H_{\mathrm{int}}}
+U_{\alpha\beta\gamma\lambda} c^{\dagger}_{k\alpha}c^{\dagger}_{k'+q,\lambda}c_{k'\gamma}c_{k+q,\beta}}_{H_{\mathrm{int}}}
 $$
 
 (1.2)
@@ -38,11 +38,12 @@ $t_{rr',\alpha\beta}$ は**ホッピング積分**であり、そのフーリエ
 
 > **補足（並進対称性がない場合）**
 > 並進対称性がないときは一次項が $k-k'$ 非対角になり、
+>
 > $$
-> H=\underbrace{\sum_{k k',\,\alpha\beta}\varepsilon_{k k',\alpha\beta}\,c^{\dagger}_{k\alpha}c_{k'\beta}}_{H_0}
+> H=\underbrace{\sum_{k k', \alpha\beta}\varepsilon_{k k',\alpha\beta} c^{\dagger}_{k\alpha}c_{k'\beta}}_{H_0}
 > +
 > \underbrace{\frac{1}{4}\sum_{k_1k_2k_3k_4}\sum_{\alpha\beta\gamma\lambda}
-> U_{\alpha\beta\gamma\lambda}\,c^{\dagger}_{k_1\alpha}c^{\dagger}_{k_4\lambda}c_{k_3\gamma}c_{k_2\beta}}_{H_{\mathrm{int}}}
+> U_{\alpha\beta\gamma\lambda} c^{\dagger}_{k_1\alpha}c^{\dagger}_{k_4\lambda}c_{k_3\gamma}c_{k_2\beta}}_{H_{\mathrm{int}}}
 > $$
 >
 > (1.3)
@@ -79,21 +80,21 @@ $$
 **遅延（Retarded）**, **先進（Advanced）**, **因果（Causal）** の 3 種を以下で定義する（$\hbar=1$）。
 
 $$
-G^{R}_{\alpha\beta}(r,r',t,t')=-\,i\,\theta(t-t')\,
-\Big\langle \, [\,c_{r\alpha}(t),\,c^{\dagger}_{r'\beta}(t')\,]_+ \,\Big\rangle
+G^{R}_{\alpha\beta}(r,r',t,t')=- i \,\theta(t-t')
+\Big\langle  [ c_{r\alpha}(t), c^{\dagger}_{r'\beta}(t') ]_+  \Big\rangle
 $$
 
 (1.6)
 
 $$
-G^{A}_{\alpha\beta}(r,r',t,t')=+\,i\,\theta(t'-t)\,
-\Big\langle \, [\,c_{r\alpha}(t),\,c^{\dagger}_{r'\beta}(t')\,]_+ \,\Big\rangle
+G^{A}_{\alpha\beta}(r,r',t,t')=+ i \,\theta(t'-t)
+\Big\langle  [ c_{r\alpha}(t), c^{\dagger}_{r'\beta}(t') ]_+  \Big\rangle
 $$
 
 (1.7)
 
 $$
-G^{C}_{\alpha\beta}(r,r',t,t')=-\,i\,\Big\langle T_t\,c_{r\alpha}(t)\,c^{\dagger}_{r'\beta}(t') \Big\rangle
+G^{C}_{\alpha\beta}(r,r',t,t')=- i \,\Big\langle T_t\,c_{r\alpha}(t)\,c^{\dagger}_{r'\beta}(t') \Big\rangle
 =G^{R}_{\alpha\beta}+G^{A}_{\alpha\beta}
 $$
 
@@ -459,6 +460,7 @@ $$
 (1.55)
 
 よって解析接続 $i\omega_n\to \omega\pm i\delta$ により
+
 $$
 G^{R}(k,\omega)=G(k,i\omega_n\to\omega+i\delta),\quad
 G^{A}(k,\omega)=G(k,i\omega_n\to\omega-i\delta).
