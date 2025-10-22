@@ -80,21 +80,21 @@ $$
 **遅延（Retarded）**, **先進（Advanced）**, **因果（Causal）** の 3 種を以下で定義する（$\hbar=1$）。
 
 $$
-G^{R}_{\alpha\beta}(r,r',t,t')=- i \,\theta(t-t')
-\Big\langle  [ c_{r\alpha}(t), c^{\dagger}_{r'\beta}(t') ]_+  \Big\rangle
+G^{R}_{\alpha\beta}(r,r',t,t')=- i \\theta(t-t')
+\Big\langle [ c_{r\alpha}(t), c^{\dagger}_{r'\beta}(t') ]_+ \Big\rangle
 $$
 
 (1.6)
 
 $$
-G^{A}_{\alpha\beta}(r,r',t,t')=+ i \,\theta(t'-t)
-\Big\langle  [ c_{r\alpha}(t), c^{\dagger}_{r'\beta}(t') ]_+  \Big\rangle
+G^{A}_{\alpha\beta}(r,r',t,t')=+ i \\theta(t'-t)
+\Big\langle [ c_{r\alpha}(t), c^{\dagger}_{r'\beta}(t') ]_+ \Big\rangle
 $$
 
 (1.7)
 
 $$
-G^{C}_{\alpha\beta}(r,r',t,t')=- i \,\Big\langle T_t\,c_{r\alpha}(t)\,c^{\dagger}_{r'\beta}(t') \Big\rangle
+G^{C}_{\alpha\beta}(r,r',t,t')=- i \Big\langle T_t c_{r\alpha}(t) c^{\dagger}_{r'\beta}(t') \Big\rangle
 =G^{R}_{\alpha\beta}+G^{A}_{\alpha\beta}
 $$
 
@@ -113,6 +113,7 @@ $$
 (1.9)
 $T_t$ は**時間順序演算子**（交換ごとにフェルミオンでマイナス、ボソンでプラス）。
 ハイゼンベルグ表示は
+
 $$
 A(t)=e^{iHt}A e^{-iHt},\qquad
 \langle A\rangle=\dfrac{\mathrm{Tr}(e^{-\beta H}A)}{\mathrm{Tr}(e^{-\beta H})}
@@ -219,7 +220,7 @@ $$
 $$
 G^{A}(k,\omega)=
 \begin{cases}
-\big[(\omega-i\delta+\mu)I-\varepsilon_k\big]^{-1} &(U=0)\\[4pt]
+\big[(\omega-i\delta+\mu)I-\varepsilon_k\big]^{-1} &(U=0)\\
 \big[(\omega+\mu)I-\varepsilon_k-\Sigma^{A}(k,\omega)\big]^{-1} &(U\neq 0)
 \end{cases}
 $$
@@ -308,7 +309,7 @@ $$
 $$
 A_{\alpha\alpha}(k,\omega)=
 \begin{cases}
-\delta(\omega+\mu-\varepsilon_{\alpha\alpha}(k)) &(U=0)\\[4pt]
+\delta(\omega+\mu-\varepsilon_{\alpha\alpha}(k)) &(U=0)\\
 \dfrac{-\,\mathrm{Im}\,\Sigma^{R}(k,\omega)/\pi}
 {\{\omega+\mu-\varepsilon_{\alpha\alpha}(k)-\mathrm{Re}\,\Sigma^{R}(k,\omega)\}^2+ \{\mathrm{Im}\,\Sigma^{R}(k,\omega)\}^2}
 &(U\neq 0)
@@ -439,6 +440,7 @@ $$
 (1.54)
 > **補足式（段差表現）**
 > $T_{\tau}$ の定義を避けて階段関数で書くと
+> 
 > $$
 > G_{\alpha\beta}(r,r',\tau,\tau')=-\theta(\tau-\tau')\langle c_{r\alpha}(\tau)c^{\dagger}_{r'\beta}(\tau')\rangle
 > +\theta(\tau'-\tau)\langle c^{\dagger}_{r'\beta}(\tau')c_{r\alpha}(\tau)\rangle,
