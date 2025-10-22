@@ -100,6 +100,7 @@ $$
 (1.8)
 
 ここで階段関数 $\theta(t)$ は
+
 $$
 \theta(t)=
 \begin{cases}
@@ -120,7 +121,7 @@ $$
 
 > **直観**
 >
-> - $G^R$ は *過去 $\to$ 未来* の応答、$G^A$ は *未来 $\leftarrow$ 過去* の相関を記述。
+> - $G^R$ は *過去 → 未来* の応答、$G^A$ は *未来 ← 過去* の相関を記述。
 > - 実験的応答に最も対応が良いのは $G^R$。数学的取扱いでは $G^A$・$G^C$ も用いる。
 >
 
@@ -179,6 +180,7 @@ $$
 (1.16)
 
 フーリエ変換
+
 $$
 G^{R}_{\alpha\beta}(r,r',t)=\int d\omega\,G^{R}_{\alpha\beta}(r,r',\omega)\,e^{-i\omega t}
 $$
@@ -353,7 +355,7 @@ $$
 アンチ周期性より
 
 $$
-G_{\alpha\beta}(r,r',\tau+\beta)=-\,G_{\alpha\beta}(r,r',\tau),
+G_{\alpha\beta}(r,r',\tau+\beta)=-G_{\alpha\beta}(r,r',\tau),
 \qquad
 G_{\alpha\beta}(r,r',\tau+2\beta)=G_{\alpha\beta}(r,r',\tau).
 $$
