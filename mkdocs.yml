@@ -80,6 +80,7 @@ nav:
           - Part 1: Classes/Green_function_mizuno/part1.md
           - Part 2: Classes/Green_function_mizuno/part2.md
           - Part 3: Classes/Green_function_mizuno/part3.md
+          - newpart3: Classes/Green_function_mizuno/newpart3.md
 
     - 量子多体系のための摂動論:
       - 概要: perturbation/abst.md
