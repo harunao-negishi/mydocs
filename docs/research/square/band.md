@@ -1,5 +1,9 @@
 # 2次元正方格子のバンド分散
 
+まず初めに、二次元正方格子のバンド分散についてまとめてみましょう。
+
+強束縛模型のハミルトニアンを構築して、そこから**波数に対するエネルギー分散、\(\epsilon(k)\)**を求めてそれをプロットすることが目標になります。
+
 ## 0. ねらい
 - 強束縛模型の**一般形**からスタートし、
 - フーリエ変換で **\(k\)-空間ハミルトニアン**を導出、
@@ -17,14 +21,14 @@ $$
 \hat{H}= \sum_{\mathbf{R}} \epsilon_0\, \hat{c}^\dagger_{\mathbf{R}} \hat{c}_{\mathbf{R}}+ \sum_{\mathbf{R}}\sum_{\boldsymbol{\delta}} t(\boldsymbol{\delta})\,\hat{c}^\dagger_{\mathbf{R}} \hat{c}_{\mathbf{R}+\boldsymbol{\delta}}. 
 $$
 
-ここでは、１サイトに１軌道しかないものとして扱う。多軌道・多サイトは下の方で考える。
+ここでは、１サイトに１軌道しかないものとして扱う。多軌道・多サイトは別のタブで考える。
 Rについての和は、全サイトで取るようにする。
 
 - \(\hat{c}^\dagger_{\mathbf{R}}\)：サイト \(\mathbf{R}\) での生成演算子  
 - \(\epsilon_0\)：オンサイトエネルギー  (そのサイトに電子が一つ存在するときのエネルギー)
 - \(t(\boldsymbol{\delta})\)：相対ベクトル \(\boldsymbol{\delta}\) へのホッピング（距離に応じて \(t, t', t''\dots\)）
 
-**エルミート性**より
+ハミルトニアンはエルミート演算子であることから、**エルミート性**より
 
 \[
 t(\boldsymbol{\delta}) = t^*(-\boldsymbol{\delta}).
@@ -102,7 +106,7 @@ e^{i\mathbf{k}'\cdot(\mathbf{R}+\boldsymbol{\delta})}
 
 ### 3.1 格子とブリルアンゾーン
 - 実空間基底：\(\mathbf{a}_1=(a,0),\ \mathbf{a}_2=(0,a)\)  
-- 逆格子基底：\(\mathbf{b}_1=\tfrac{2\pi}{a}(1,0),\ \mathbf{b}_2=\tfrac{2\pi}{a}(0,1)\)  
+- 逆格子基底：\(\mathbf{b}_1=\tfrac{2\pi}{a}(1,0),\ \mathbf{b}_2=\tfrac{2\pi}{a}(0,1)\)  （具体的な形がわからなくても、\(\mathbf{a}_i\cdot\mathbf{b}_j=2\pi i\delta_{ij}\)をわかっていればよい）
 - 1次BZ：\(k_x, k_y \in [-\pi/a,\,\pi/a]\)
 
 **最近接（NN）**の相対ベクトル：
@@ -110,6 +114,8 @@ e^{i\mathbf{k}'\cdot(\mathbf{R}+\boldsymbol{\delta})}
 \[
 \boldsymbol{\delta}\in\{(\pm a,0),(0,\pm a)\}.
 \]
+
+これについても、実空間の基底に対して…と考えた方が応用が効いてよいと思われる。
 
 ### 3.2 近接の順に加える
 
