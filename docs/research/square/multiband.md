@@ -1,5 +1,5 @@
 # 多軌道（多サイト）強束縛模型のフーリエ変換と対角化
-単位胞に複数サイト（サブ格子）/軌道を持つ TB モデルを、実空間から **\(k\)-空間** へ写像し、一般式と具体例（A/B 二サイトの正方格子・ハニカム）で **固有値・固有ベクトル** まで追う。
+単位胞に複数サイト（サブ格子）/軌道を持つ TB モデルを、実空間から **\(k\)-空間** へフーリエ変換して、A/B 二サイトの正方格子・ハニカム）で **固有値・固有ベクトル** まで追う。
 
 ---
 
@@ -185,6 +185,7 @@ e^{\,i\phi_{\mathbf k}}\cos\frac{\theta_{\mathbf k}}{2}
 - 近接は **A–B 最近接のみ** とする（\(\boldsymbol\tau_B-\boldsymbol\tau_A\) は格子の中心対称で 0 に取っても OK）。
 
 **最近接 A→B の相対ベクトル**：\(\boldsymbol\delta\in\{(\pm a,0),(0,\pm a)\}\)  
+
 \[
 \gamma(\mathbf k)=t\sum_{\boldsymbol\delta}e^{i\mathbf k\cdot\boldsymbol\delta}
 =t\left(e^{ik_xa}+e^{-ik_xa}+e^{ik_ya}+e^{-ik_ya}\right)
@@ -192,6 +193,7 @@ e^{\,i\phi_{\mathbf k}}\cos\frac{\theta_{\mathbf k}}{2}
 \]
 
 **サブ格子ポテンシャル** \(\epsilon_A=+\Delta/2,\ \epsilon_B=-\Delta/2\) とすれば
+
 \[
 H(\mathbf k)=
 \begin{pmatrix}
@@ -200,6 +202,7 @@ H(\mathbf k)=
 \end{pmatrix},\qquad
 E_\pm(\mathbf k)=\pm\sqrt{(\Delta/2)^2+\gamma(\mathbf k)^2}.
 \]
+
 - \(\Delta=0\)：\(\Gamma(\mathbf k=0)\) で分離最大、\((\pi/a,\pi/a)\) で接近。  
 - \(\Delta\neq0\)：全域で**ギャップ \(=|\Delta|\)**。  
 - NNN（同一サブ格子内）を入れるなら
@@ -214,6 +217,7 @@ E_\pm(\mathbf k)=\pm\sqrt{(\Delta/2)^2+\gamma(\mathbf k)^2}.
 - 最近接距離を \(a\) とする（注意：文献により“格子定数”の定義が異なる）。  
 - 単位胞内位置は \(\boldsymbol\tau_A=\mathbf 0\)、\(\boldsymbol\tau_B=\boldsymbol\delta_1\) に取る流儀もあるが、ここでは簡単のため **\(\boldsymbol\tau_B-\boldsymbol\tau_A=0\)** と置くゲージを使う。  
 - 最近接ベクトル
+
 \[
 \boldsymbol\delta_1=a(0,1),\quad
 \boldsymbol\delta_2=a\left(\frac{\sqrt3}{2},-\frac{1}{2}\right),\quad
@@ -221,6 +225,7 @@ E_\pm(\mathbf k)=\pm\sqrt{(\Delta/2)^2+\gamma(\mathbf k)^2}.
 \]
 
 **構造因子**：
+
 \[
 \gamma(\mathbf k)=t\sum_{j=1}^3 e^{i\mathbf k\cdot\boldsymbol\delta_j}
 =t\Big(
@@ -231,6 +236,7 @@ e^{ik_y a}
 \]
 
 **2×2 ハミルトニアン**（サブ格子ポテンシャル \(\pm \Delta/2\) を任意に許す）：
+
 \[
 H(\mathbf k)=\begin{pmatrix}
 \Delta/2 & \gamma(\mathbf k)\\
@@ -242,17 +248,21 @@ E_\pm(\mathbf k)=\pm\sqrt{(\Delta/2)^2+|\gamma(\mathbf k)|^2}.
 
 **ディラック点**：\(\gamma(\mathbf k)=0\) を満たす \(\mathbf k\)（\(\Delta=0\) なら接触）  
 代表的に
+
 \[
 \mathbf K=\left(\frac{4\pi}{3\sqrt3 a},\,0\right),\qquad
 \mathbf K'=-\mathbf K,
 \]
+
 で \(\gamma(\mathbf K)=0\)。\(\Delta\neq0\) なら **ギャップ \(|\Delta|\)**。
 
 **低エネルギー展開**（\(\mathbf k=\mathbf K+\mathbf q\)、小 \(|\mathbf q|\)）：
+
 \[
 H(\mathbf q)\approx v_F\,(q_x\sigma_x+q_y\sigma_y)+\frac{\Delta}{2}\sigma_z,\qquad
 v_F=\frac{\sqrt3}{2}|t|a\ .
 \]
+
 - \(\Delta=0\)：質量なしの**ディラック分散**。  
 - \(\Delta\neq0\)：質量付き（ギャップ開口）。
 
@@ -262,6 +272,7 @@ v_F=\frac{\sqrt3}{2}|t|a\ .
 
 ## 5. 実装ミニコード（数値対角化）
 ### 5.1 正方格子 A/B（二サイト、最近接のみ）
+
 ```python
 import numpy as np
 

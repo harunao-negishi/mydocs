@@ -5,6 +5,7 @@
 強束縛模型のハミルトニアンを構築して、そこから**波数に対するエネルギー分散、\(\epsilon(k)\)**を求めてそれをプロットすることが目標になります。
 
 ## 0. ねらい
+
 - 強束縛模型の**一般形**からスタートし、
 - フーリエ変換で **\(k\)-空間ハミルトニアン**を導出、
 - **2次元正方格子**に適用して**分散関係 \(\varepsilon(\mathbf{k})\)** を得る。
@@ -17,8 +18,8 @@
 
 実空間の二次量子化ハミルトニアン：
 
-$$ 
-\hat{H}= \sum_{\mathbf{R}} \epsilon_0\, \hat{c}^\dagger_{\mathbf{R}} \hat{c}_{\mathbf{R}}+ \sum_{\mathbf{R}}\sum_{\boldsymbol{\delta}} t(\boldsymbol{\delta})\,\hat{c}^\dagger_{\mathbf{R}} \hat{c}_{\mathbf{R}+\boldsymbol{\delta}}. 
+$$
+\hat{H}= \sum_{\mathbf{R}} \epsilon_0\, \hat{c}^\dagger_{\mathbf{R}} \hat{c}_{\mathbf{R}}+ \sum_{\mathbf{R}}\sum_{\boldsymbol{\delta}} t(\boldsymbol{\delta})\,\hat{c}^\dagger_{\mathbf{R}} \hat{c}_{\mathbf{R}+\boldsymbol{\delta}}.
 $$
 
 ここでは、１サイトに１軌道しかないものとして扱う。多軌道・多サイトは別のタブで考える。
@@ -95,7 +96,7 @@ e^{i\mathbf{k}'\cdot(\mathbf{R}+\boldsymbol{\delta})}
 
 > 直感：\(\varepsilon(\mathbf{k})\) は「全ホッピングの**位相和**」。  
 > 対称性 \(t(\boldsymbol{\delta})=t(-\boldsymbol{\delta})\) を使うと
-> 
+>
 > \[
 > \varepsilon(\mathbf{k}) = \epsilon_0 + 2\sum_{\boldsymbol{\delta}>0} t(\boldsymbol{\delta}) \cos(\mathbf{k}\cdot\boldsymbol{\delta}).
 > \]
@@ -105,6 +106,7 @@ e^{i\mathbf{k}'\cdot(\mathbf{R}+\boldsymbol{\delta})}
 ## 3. 2次元正方格子（square lattice）への適用
 
 ### 3.1 格子とブリルアンゾーン
+
 - 実空間基底：\(\mathbf{a}_1=(a,0),\ \mathbf{a}_2=(0,a)\)  
 - 逆格子基底：\(\mathbf{b}_1=\tfrac{2\pi}{a}(1,0),\ \mathbf{b}_2=\tfrac{2\pi}{a}(0,1)\)  （具体的な形がわからなくても、\(\mathbf{a}_i\cdot\mathbf{b}_j=2\pi i\delta_{ij}\)をわかっていればよい）
 - 1次BZ：\(k_x, k_y \in [-\pi/a,\,\pi/a]\)
@@ -167,13 +169,52 @@ $$ \boxed{\;\varepsilon(\mathbf{k})= \epsilon_0+ 2t\big(\cos k_x a + \cos k_y a\
 ---
 
 ## 4. バンドの特徴（メモ）
+
 - 最近接のみ：帯域幅 \(W=8|t|\)、頂点・谷は \(\Gamma=(0,0)\) と \((\pi/a,\pi/a)\)。  
 - \(t'\) を入れると**電子–正孔非対称**が生じ、\((\pi/a,0)\)・\((0,\pi/a)\) 付近（\(\mathrm{M}\)点）で**鞍点（van Hove）**の位置やエネルギーがずれる。  
 - \(t''\) はさらなる非対称性や曲率調整に効く。
 
+### 4.1 実プロット（Γ–X–M–Γ）
+
+下図は、上で導いた代表式に基づいて 2 次元正方格子のバンドを高対称線 \(\Gamma\to X\to M\to\Gamma\) でプロットした例です。
+
+![square band along Γ–X–M–Γ](figs/band_square.png)
+
+実行コードはこのページと同じディレクトリ配下に置きました（編集・再実行で図を更新できます）。
+
+- スクリプト: [scripts/plot_band.py](scripts/plot_band.py)（GitHub: [harunao-negishi/mydocs › docs/research/square/scripts/plot_band.py](https://github.com/harunao-negishi/mydocs/blob/main/docs/research/square/scripts/plot_band.py)）
+- 出力先: `figs/band_square.png`
+
+パラメータ（\(t, t', t''\) など）はスクリプト冒頭の `CONFIG` で変更できます。Windows PowerShell からの実行例:
+
+```powershell
+# 仮想環境が自動選択される場合は、単に:
+# python docs/research/square/scripts/plot_band.py
+
+# 明示的に仮想環境の Python を使う場合（自動構成済み）
+C:/Users/harut/Documents/mkdocs_projects/.venv/Scripts/python.exe docs/research/square/scripts/plot_band.py
+```
+
+### 4.2 3次元表示（ブリルアンゾーン上の表面）
+
+分散 \(\varepsilon(\mathbf{k})\) を \(k_x\text{–}k_y\) 平面全体でサンプリングし，3D サーフェスとして可視化した例です。パラメータは 4.1 と同様に変更できます。
+
+![square band surface over BZ](figs/band_square_3d.png)
+
+- スクリプト: [scripts/plot_band_3d.py](scripts/plot_band_3d.py)（GitHub: [harunao-negishi/mydocs › docs/research/square/scripts/plot_band_3d.py](https://github.com/harunao-negishi/mydocs/blob/main/docs/research/square/scripts/plot_band_3d.py)）
+- 出力先: `figs/band_square_3d.png`
+
+Windows PowerShell からの実行例:
+
+```powershell
+# 3D 図を生成
+C:/Users/harut/Documents/mkdocs_projects/.venv/Scripts/python.exe docs/research/square/scripts/plot_band_3d.py
+```
+
 ---
 
 ## 5. よくある拡張・注意
+
 - **多軌道**：\(\hat{H}(\mathbf{k})\) は行列になり、固有値問題 \(\det|H(\mathbf{k})-E|=0\)。  
 - **スピン**：スピン縮退やスピン–軌道相互作用（SOC）を入れるとブロックが増える。  
 - **規格化**：フーリエ変換の \(1/\sqrt{N}\) などは全体で整合すればOK。  
@@ -181,168 +222,16 @@ $$ \boxed{\;\varepsilon(\mathbf{k})= \epsilon_0+ 2t\big(\cos k_x a + \cos k_y a\
 
 ---
 
-## 6. 多軌道（多サイト）強束縛模型の基本
+## 6. 多軌道（多サイト）へ進むには
 
-単一セルに \(M\) 軌道（あるいは \(M\) サブ格子）ある場合、実空間は
+このページでは単一バンド（単一サイト・単一軌道）に焦点を当てました。複数サブ格子や多軌道を含む場合は、行列ハミルトニアン \(H(\mathbf{k})\) の固有値問題になります。詳しい導出（単位胞内位置の位相、A/B 二サイトの正方格子・ハニカムの具体例、固有ベクトルまで）は、別ページにまとめています。
 
-\[
-\hat{H}
-= \sum_{\mathbf{R}}\sum_{\alpha=1}^{M}\epsilon_\alpha\,
-\hat{c}^\dagger_{\mathbf{R}\alpha}\hat{c}_{\mathbf{R}\alpha}
-+ \sum_{\mathbf{R}}\sum_{\boldsymbol{\delta}}\sum_{\alpha,\beta}
-t_{\alpha\beta}(\boldsymbol{\delta})\,
-\hat{c}^\dagger_{\mathbf{R}\alpha}\hat{c}_{\mathbf{R}+\boldsymbol{\delta},\beta}.
-\]
+- 解説と完全版の導出・例題: [multiband.md](multiband.md)
 
-\[
-\hat{c}_{\mathbf{R}\alpha} = \frac{1}{\sqrt{N}}\sum_{\mathbf{k}} e^{i\mathbf{k}\cdot\mathbf{R}} \hat{c}_{\mathbf{k}\alpha}
-\quad\Rightarrow\quad
-\hat{H} = \sum_{\mathbf{k}} \hat{\boldsymbol{c}}^\dagger_{\mathbf{k}}\, H(\mathbf{k})\, \hat{\boldsymbol{c}}_{\mathbf{k}},
-\]
+ポイントだけ抜粋すると：
 
-\[
-\boxed{\ H_{\alpha\beta}(\mathbf{k})
-= \epsilon_\alpha \delta_{\alpha\beta} + \sum_{\boldsymbol{\delta}} t_{\alpha\beta}(\boldsymbol{\delta}) e^{i\mathbf{k}\cdot\boldsymbol{\delta}}.\ }
-\]
+- 多軌道（多サイト）では \(H_{\alpha\beta}(\mathbf k)\) は \(M\times M\) 行列。
+- サブ格子間の“構造因子” \(\gamma(\mathbf k)\) が分散の形を決め、サブ格子ポテンシャル差 \(\Delta\) がギャップを与える。
+- ゲージ（単位胞内位置の位相）の取り方で見かけは変わっても、物理量は不変。
 
-ここで \(\hat{\boldsymbol{c}}_{\mathbf{k}} = (\hat{c}_{\mathbf{k}1},\dots,\hat{c}_{\mathbf{k}M})^\mathsf{T}\)。  
-固有値問題：
-
-\[
-H(\mathbf{k}) \, \boldsymbol{u}_n(\mathbf{k}) = E_n(\mathbf{k}) \boldsymbol{u}_n(\mathbf{k}),
-\quad n=1,\dots,M.
-\]
-
-### 例：2サイト（A/B）モデル
-
-\[
-H(\mathbf{k})=
-\begin{pmatrix}
-\epsilon_A + \sum_{\delta} t_{AA}(\delta)e^{i\mathbf{k}\cdot\delta} & \sum_{\delta} t_{AB}(\delta)e^{i\mathbf{k}\cdot\delta} \\
-\sum_{\delta} t_{BA}(\delta)e^{i\mathbf{k}\cdot\delta} & \epsilon_B + \sum_{\delta} t_{BB}(\delta)e^{i\mathbf{k}\cdot\delta}
-\end{pmatrix}.
-\]
-
-- サブ格子（ハニカム等）や多軌道（\(d_{x^2-y^2}\), \(d_{3z^2-r^2}\) …）はこの枠組みで扱える。  
-- スピンを含めるなら、各ブロックを \(\uparrow/\downarrow\) で直積化、SOCならスピン-軌道のオフ対角を追加。
-
-## 7. 多軌道（多サイト）強束縛模型をもう一歩
-
-### 7.1 一般式の復習と行列表現
-単位胞に \(M\) 軌道（or サブ格子）があるとき、実空間ハミルトニアンは
-
-\[
-\hat{H}
-= \sum_{\mathbf{R}}\sum_{\alpha=1}^M \epsilon_\alpha
-  \hat{c}^\dagger_{\mathbf{R}\alpha}\hat{c}_{\mathbf{R}\alpha}
-+ \sum_{\mathbf{R}}\sum_{\boldsymbol{\delta}}\sum_{\alpha,\beta}
-  t_{\alpha\beta}(\boldsymbol{\delta})
-  \hat{c}^\dagger_{\mathbf{R}\alpha}\hat{c}_{\mathbf{R}+\boldsymbol{\delta},\beta}.
-\]
-
-フーリエ変換で
-
-\[
-\hat{H}=\sum_{\mathbf{k}} \hat{\boldsymbol{c}}^\dagger_{\mathbf{k}}\,H(\mathbf{k})\,\hat{\boldsymbol{c}}_{\mathbf{k}},
-\quad
-H_{\alpha\beta}(\mathbf{k})
-=\epsilon_\alpha \delta_{\alpha\beta}
- + \sum_{\boldsymbol{\delta}} t_{\alpha\beta}(\boldsymbol{\delta}) e^{i\mathbf{k}\cdot\boldsymbol{\delta}}.
-\]
-
-固有値問題 \(H(\mathbf{k})\boldsymbol{u}_n(\mathbf{k})=E_n(\mathbf{k})\boldsymbol{u}_n(\mathbf{k})\) を解けば \(M\) 本のバンド \(E_n(\mathbf{k})\)。
-
----
-
-### 7.2 2サイト（A/B）・最近接のみの基本形
-A/B サブ格子（1サイト/サブ格子、単位胞に2サイト）。A↔B のみ最近接 \(t\) とする：
-
-\[
-H(\mathbf{k})=
-\begin{pmatrix}
-\epsilon_A & \gamma(\mathbf{k}) \\
-\gamma^*(\mathbf{k}) & \epsilon_B
-\end{pmatrix},\quad
-\gamma(\mathbf{k})=\sum_{\delta\in \text{A→B}} t\, e^{i\mathbf{k}\cdot\boldsymbol{\delta}}.
-\]
-
-固有値：
-
-\[
-E_\pm(\mathbf{k})=\frac{\epsilon_A+\epsilon_B}{2}
-\pm \sqrt{\left(\frac{\epsilon_A-\epsilon_B}{2}\right)^2 + |\gamma(\mathbf{k})|^2 }.
-\]
-
-- \(\Delta\equiv \epsilon_A-\epsilon_B\) が **質量項**となり、\(\mathbf{k}\) に依らない**ギャップ**を開く。
-- \(|\gamma(\mathbf{k})|\) は**分散**を決める“構造因子”。格子で形が変わる。
-
-**例：正方格子（A/Bにチェッカーボード状）**  
-A→Bの最近接 \(\boldsymbol{\delta}\in\{\pm(a,0),\pm(0,a)\}\) とすれば
-
-\[
-\gamma(\mathbf{k}) = t\left(e^{ik_x a}+e^{-ik_x a}+e^{ik_y a}+e^{-ik_y a}\right)
-= 2t\left(\cos k_x a + \cos k_y a\right).
-\]
-
-\(\epsilon_A=\epsilon_B\) なら
-
-\[
-E_\pm(\mathbf{k}) = \pm\,|\gamma(\mathbf{k})| = \pm\,2|t|\,|\cos k_x a + \cos k_y a|.
-\]
-
-（サブ格子対称性があると**バンドが±対称**になり、\(\Delta\neq0\) で開口）
-
-**例：ハニカム（A/B）**  
-最近接3本で
-
-\[
-\gamma(\mathbf{k})=t\left(1+e^{i\mathbf{k}\cdot\mathbf{a}_1}+e^{i\mathbf{k}\cdot\mathbf{a}_2}\right),
-\]
-
-\(K\) 点で \(\gamma=0\) → **ディラック点**。\(\Delta\neq 0\) でギャップ。
-
----
-
-### 7.3 2軌道（同一サイト内）の場合（軌道混成）
-同じサイトに \(\{1,2\}\) 軌道（例：\(d_{x^2-y^2}, d_{3z^2-r^2}\)）。  
-オンサイト混成 \(V\) と、各軌道の自己ホッピング \(\varepsilon_{1,2}(\mathbf{k})\) を入れる：
-
-\[
-H(\mathbf{k})=
-\begin{pmatrix}
-\varepsilon_1(\mathbf{k}) & V(\mathbf{k}) \\
-V^*(\mathbf{k}) & \varepsilon_2(\mathbf{k})
-\end{pmatrix}.
-\]
-
-固有値：
-
-\[
-E_\pm(\mathbf{k})=\frac{\varepsilon_1+\varepsilon_2}{2}
-\pm \sqrt{\left(\frac{\varepsilon_1-\varepsilon_2}{2}\right)^2 + |V(\mathbf{k})|^2 }.
-\]
-
-- \(\varepsilon_{1,2}(\mathbf{k})\) はそれぞれ単軌道の式（例：\(2t(\cos k_x a+\cos k_y a)+\dots\)）。  
-- \(V(\mathbf{k})\) は対称性で決まる（Slater–Koster表：\(pd\sigma\), \(dd\pi\) など）。
-
----
-
-### 7.4 次近接やSOCの入れ方メモ
-- **同一サブ格子内**の NNN は対角要素に入る：  
-  \(H_{AA}\sim 4t'_{AA}\cos k_xa\,\cos k_ya\) など。
-- **SOC**（スピンまで含む）ではブロックが \(2M\times2M\) に拡張：  
-  \(H\to H\otimes \mathbb{1}_\text{spin} + \lambda\,\mathbf{L}\cdot\mathbf{S}\) の形でオフ対角が増える。
-
-
-
-## 7. 参考：最小コード片（\(\varepsilon(\mathbf{k})\)）
-
-```python
-import numpy as np
-
-def eps_k(kx, ky, a=1.0, t=-1.0, tp=0.0, tpp=0.0, eps0=0.0):
-    return (eps0
-            + 2*t*(np.cos(kx*a) + np.cos(ky*a))
-            + 4*tp*np.cos(kx*a)*np.cos(ky*a)
-            + 2*tpp*(np.cos(2*kx*a) + np.cos(2*ky*a))) 
-```
+以降は DOS（状態密度）や応用へ進みます。
