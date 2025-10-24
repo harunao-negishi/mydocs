@@ -1,0 +1,445 @@
+DEBUG   -  Loading configuration file: C:\Users\harut\Documents\mydocs\mkdocs.yml
+DEBUG   -  Loaded theme configuration for 'material' from 'C:\Users\harut\Documents\mydocs\.venv\Lib\site-packages\material\templates\mkdocs_theme.yml': {'language': 'en', 'direction': None, 'features': [], 'font': {'text': 'Roboto', 'code': 'Roboto Mono'}, 'icon': None, 'favicon': 'assets/images/favicon.png', 'static_templates': ['404.html']}
+DEBUG   -  Config value 'config_file_path' = 'C:\\Users\\harut\\Documents\\mydocs\\mkdocs.yml'
+DEBUG   -  Config value 'site_name' = '私の研究ドキュメント'
+DEBUG   -  Config value 'nav' = [{'トップページ': 'index.md'}, {'ノート': 'notes.md'}, {'プログラミング': [{'MkDocs': [{'はじめに': 'programming/mkdocs/intro.md'}, {'基本運用': 'programming/mkdocs/basics.md'}, {'使い方': 'programming/mkdocs/usage.md'}, {'Tips集': 'programming/mkdocs/tips.md'}]}, {'Remote SSH': [{'はじめに': 'programming/remoteSSH/intro.md'}, {'接続設定': 'programming/remoteSSH/setup.md'}, {'使い方': 'programming/remoteSSH/usage.md'}, {'Tips集': 'programming/remoteSSH/tips.md'}]}, {'Git / GitHub': [{'はじめに': 'programming/git/intro.md'}, {'基本操作': 'programming/git/basics.md'}, {'リモートとGitHub': 'programming/git/github.md'}, {'ブランチと運用': 'programming/git/branching.md'}, {'トラブル対応': 'programming/git/troubleshooting.md'}, {'家／研究室ワークフロー': 'programming/git/workflow.md'}]}, {'Python': [{'はじめに': 'programming/python/intro.md'}, {'基本運用': 'programming/python/basics.md'}, {'使い方': 'programming/python/usage.md'}, {'Tips集': 'programming/python/tips.md'}]}, {'VS Code': [{'はじめに': 'programming/vscode/intro.md'}, {'使い方': 'programming/vscode/usage.md'}, {'Tips集': 'programming/vscode/tips.md'}]}]}, {'授業ノート': [{'非線形物理': [{'第1回': 'Classes/non-linear-phys/lec01.md'}, {'第2回': 'Classes/non-linear-phys/lec02.md'}]}, {'グリーン関数（水野）': [{'Part 1': 'Classes/Green_function_mizuno/part1.md'}, {'Part 2': 'Classes/Green_function_mizuno/part2.md'}, {'Part 3': 'Classes/Green_function_mizuno/part3.md'}, {'newpart3': 'Classes/Green_function_mizuno/newpart3.md'}]}, {'Reading circle M1': [{'まとめ1': 'Classes/Reading_circle_M1/summary1.md'}, {'まとめ2': 'Classes/Reading_circle_M1/summary2.md'}, {'まとめ3': 'Classes/Reading_circle_M1/summary3.md'}, {'まとめ4': 'Classes/Reading_circle_M1/summary4.md'}, {'まとめ5': 'Classes/Reading_circle_M1/summary5.md'}]}]}, {'LAB': [{'ミーティング資料': [{'2025-10-24 栫': 'LAB/meeting/2025_10_24_kakoi.md'}]}, {'ジャーナルクラブ': [{'2025-10-24 PRL 100 076402': 'LAB/journal_club/2025_10_24_PhysRevLett.100.076402.md'}]}]}, {'量子多体系のための摂動論': [{'概要': 'perturbation/abst.md'}, {'グリーン関数': [{'グリーン関数と諸性質': 'perturbation/green/green.md'}, {'温度グリーン関数と諸性質': 'perturbation/green/tempgreen.md'}, {'遅延・先進グリーン関数': 'perturbation/green/RAgreen.md'}]}, {'相互作用とファインマンダイアグラム': [{'相互作用のグリーン関数': 'perturbation/fd/interaction.md'}, {'ブロッホドミニシスの定理': 'perturbation/fd/bloch.md'}, {'ファインマンダイアグラム': 'perturbation/fd/fd.md'}, {'自己エネルギーとダイソン方程式': 'perturbation/fd/dyson.md'}, {'相互作用のFD': 'perturbation/fd/fd_interaction.md'}]}, {'線形応答理論': [{'応答関数の諸性質': 'perturbation/lrt/rf.md'}, {'電荷感受率': 'perturbation/lrt/charge.md'}, {'磁気感受率': 'perturbation/lrt/spin.md'}, {'RPA近似': 'perturbation/lrt/others.md'}]}, {'RPA(計算)': [{'概要': 'perturbation/rpa/abst.md'}, {'RPAの基礎': 'perturbation/rpa/rpa.md'}, {'コード解説1 感受率': 'perturbation/rpa/susceptibility.md'}, {'スピン感受率メモ': 'perturbation/rpa/spin_susceptibility.md'}, {'コード解説2 相互作用の導入': 'perturbation/rpa/interaction.md'}, {'コード解説3 自己エネルギー': 'perturbation/rpa/self-energy.md'}, {'コード解説4 グリーン関数': 'perturbation/rpa/green_function.md'}]}]}, {'基礎固体物理': [{'概要': 'Solid_State_Phys/overview.md'}, {'1. 基礎': [{'結晶構造と格子ベクトル': 'Solid_State_Phys/basics/crystal_lattice.md'}, {'逆格子とブリルアンゾーン': 'Solid_State_Phys/basics/reciprocal_lattice.md'}, {'ブロッホの定理と波動関数': 'Solid_State_Phys/basics/bloch_theorem.md'}, {'バンド構造と有効質量': 'Solid_State_Phys/basics/band_and_mass.md'}, {'フェルミ面と電子密度': 'Solid_State_Phys/basics/fermi_surface.md'}]}, {'2. 模型': [{'模型全体の俯瞰': 'Solid_State_Phys/models/overview.md'}, {'自由電子模型': 'Solid_State_Phys/models/free_electron/overview.md'}, {'NFE近似': 'Solid_State_Phys/models/nearly_free_electron/overview.md'}, {'強束縛模型 (Tight Binding)': [{'概要': 'Solid_State_Phys/models/tight_binding/overview.md'}, {'原子軌道からの導出': 'Solid_State_Phys/models/tight_binding/derivation.md'}, {'分散関係の例': 'Solid_State_Phys/models/tight_binding/dispersion.md'}, {'局在性とバンド幅': 'Solid_State_Phys/models/tight_binding/localization.md'}]}, {'ハバード模型': 'Solid_State_Phys/models/hubbard/overview.md'}, {'模型の比較と限界': 'Solid_State_Phys/models/comparison.md'}]}, {'3. 熱・フォノン': [{'格子振動とフォノン': 'Solid_State_Phys/phonon/overview.md'}, {'デバイ模型と比熱': 'Solid_State_Phys/phonon/debye.md'}, {'フォノン分散と音速': 'Solid_State_Phys/phonon/dispersion.md'}, {'熱伝導とフォノン散乱': 'Solid_State_Phys/phonon/thermal_conductivity.md'}, {'電子－格子相互作用': 'Solid_State_Phys/phonon/electron_phonon.md'}]}, {'4. 電気特性': [{'ドリューデ模型とフェルミ液体': 'Solid_State_Phys/transport/drude.md'}, {'半導体の電子・正孔伝導': 'Solid_State_Phys/transport/semiconductor.md'}, {'ホール効果・磁気抵抗': 'Solid_State_Phys/transport/hall_effect.md'}, {'光応答・誘電関数': 'Solid_State_Phys/transport/optical_response.md'}, {'熱電効果とSeebeck係数': 'Solid_State_Phys/transport/thermoelectric.md'}]}, {'5. 磁性': [{'スピンと磁気モーメント': 'Solid_State_Phys/magnetism/spin.md'}, {'常磁性・反磁性・強磁性': 'Solid_State_Phys/magnetism/types.md'}, {'ハイゼンベルグ模型（統計へ橋渡し）': 'Solid_State_Phys/magnetism/heisenberg.md'}, {'スピン波と量子磁性': 'Solid_State_Phys/magnetism/spinwave.md'}, {'統計的取り扱いと相転移': 'Solid_State_Phys/magnetism/statistical_link.md'}]}]}, {'Research': [{'概要': 'research/overview.md'}, {'2D 正方格子': [{'バンド分散': 'research/square/band.md'}, {'多軌道に拡張する': 'research/square/multiband.md'}, {'状態密度 (DOS)': 'research/square/dos.md'}, {'充填率と化学ポテンシャル': 'research/square/filling_mu.md'}, {'グリーン関数': 'research/square/green.md'}, {'感受率とRPA': 'research/square/rpa.md'}, {'FLEX計算': 'research/square/flex.md'}]}, {'2D ハニカム格子': [{'バンド分散': 'research/honeycomb/band.md'}, {'DOSとフェルミ準位': 'research/honeycomb/dos.md'}, {'RPA計算結果': 'research/honeycomb/rpa.md'}, {'FLEX解析': 'research/honeycomb/flex.md'}]}, {'DFTとWannier化': [{'DFT理論と実装': 'research/dft/overview.md'}, {'実例_VASPからWannier90ワークフロー': 'research/dft/workflow.md'}, {'wannier_hr.datからの再構築': 'research/dft/wannier_rebuild.md'}]}]}]
+DEBUG   -  Config value 'pages' = None
+DEBUG   -  Config value 'exclude_docs' = None
+DEBUG   -  Config value 'draft_docs' = None
+DEBUG   -  Config value 'not_in_nav' = None
+DEBUG   -  Config value 'site_url' = None
+DEBUG   -  Config value 'site_description' = None
+DEBUG   -  Config value 'site_author' = None
+DEBUG   -  Config value 'theme' = Theme(name='material', dirs=['C:\\Users\\harut\\Documents\\mydocs\\.venv\\Lib\\site-packages\\material\\templates', 'C:\\Users\\harut\\Documents\\mydocs\\.venv\\Lib\\site-packages\\mkdocs\\templates'], static_templates={'404.html', 'sitemap.xml'}, name='material', locale=Locale('en'), language='en', direction=None, features=['content.code.copy', 'navigation.tabs'], font={'text': 'Roboto', 'code': 'Roboto Mono'}, icon=None, favicon='assets/images/favicon.png', palette=[{'scheme': 'default', 'primary': 'indigo', 'toggle': {'icon': 'material/weather-night', 'name': 'ダークモードへ'}}, {'scheme': 'slate', 'primary': 'indigo', 'toggle': {'icon': 'material/weather-sunny', 'name': 'ライトモードへ'}}])
+DEBUG   -  Config value 'docs_dir' = 'C:\\Users\\harut\\Documents\\mydocs\\docs'
+DEBUG   -  Config value 'site_dir' = 'C:\\Users\\harut\\AppData\\Local\\Temp\\mkdocs_t1did_5h'
+DEBUG   -  Config value 'copyright' = None
+DEBUG   -  Config value 'google_analytics' = None
+DEBUG   -  Config value 'dev_addr' = _IpAddressValue(host='127.0.0.1', port=8000)
+DEBUG   -  Config value 'use_directory_urls' = True
+DEBUG   -  Config value 'repo_url' = None
+DEBUG   -  Config value 'repo_name' = None
+DEBUG   -  Config value 'edit_uri_template' = None
+DEBUG   -  Config value 'edit_uri' = None
+DEBUG   -  Config value 'extra_css' = ['extra.css']
+DEBUG   -  Config value 'extra_javascript' = ['javascripts/mathjax.js', 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js']
+DEBUG   -  Config value 'extra_templates' = []
+DEBUG   -  Config value 'markdown_extensions' = ['toc', 'tables', 'fenced_code', 'admonition', 'pymdownx.highlight', 'pymdownx.arithmatex', 'pymdownx.superfences']
+DEBUG   -  Config value 'mdx_configs' = {'pymdownx.highlight': {'use_pygments': True, 'noclasses': False, 'pygments_style': 'monokai', 'linenums': True}, 'pymdownx.arithmatex': {'generic': True}}
+DEBUG   -  Config value 'strict' = False
+DEBUG   -  Config value 'remote_branch' = 'gh-pages'
+DEBUG   -  Config value 'remote_name' = 'origin'
+DEBUG   -  Config value 'extra' = {}
+DEBUG   -  Config value 'plugins' = {'material/search': <material.plugins.search.plugin.SearchPlugin object at 0x0000029B3DABF770>}
+DEBUG   -  Config value 'hooks' = {}
+DEBUG   -  Config value 'watch' = []
+DEBUG   -  Config value 'validation' = {'nav': {'omitted_files': 20, 'not_found': 30, 'absolute_links': 20}, 'links': {'not_found': 30, 'absolute_links': 20, 'unrecognized_links': 20, 'anchors': 20}}
+DEBUG   -  Running `startup` event from plugin 'material/search'
+INFO    -  Building documentation...
+DEBUG   -  Running `config` event from plugin 'material/search'
+DEBUG   -  Looking for translations for locale 'en'
+DEBUG   -  No translations found here: 'C:\Users\harut\Documents\mydocs\.venv\Lib\site-packages\mkdocs\templates\locales'
+DEBUG   -  No translations found here: 'C:\Users\harut\Documents\mydocs\.venv\Lib\site-packages\material\templates\locales'
+DEBUG   -  Looking for translations for locale 'en'
+DEBUG   -  No translations found here: 'C:\Users\harut\Documents\mydocs\.venv\Lib\site-packages\mkdocs\templates\locales'
+DEBUG   -  No translations found here: 'C:\Users\harut\Documents\mydocs\.venv\Lib\site-packages\material\templates\locales'
+INFO    -  Cleaning site directory
+DEBUG   -  Looking for translations for locale 'en'
+DEBUG   -  No translations found here: 'C:\Users\harut\Documents\mydocs\.venv\Lib\site-packages\mkdocs\templates\locales'
+DEBUG   -  No translations found here: 'C:\Users\harut\Documents\mydocs\.venv\Lib\site-packages\material\templates\locales'
+INFO    -  The following pages exist in the docs directory, but are not included in the "nav" configuration:
+  - Classes\Green_function_mizuno\chapter1_green_function.md
+  - Classes\Green_function_mizuno\chapter2_diagram.md
+  - Classes\Reading_circle_M1\summary.md
+  - programming\python\venv.md
+WARNING -  A reference to 'LAB/journal_club/2025_10_24_PhysRevLett.100.076402.md' is included in the 'nav' configuration, which is not found in the documentation files.
+DEBUG   -  Reading markdown pages.
+DEBUG   -  Reading: index.md
+DEBUG   -  Reading: notes.md
+DEBUG   -  Reading: Classes/Green_function_mizuno/chapter1_green_function.md
+DEBUG   -  Reading: Classes/Green_function_mizuno/chapter2_diagram.md
+DEBUG   -  Reading: Classes/Green_function_mizuno/newpart3.md
+DEBUG   -  Reading: Classes/Green_function_mizuno/part1.md
+DEBUG   -  Reading: Classes/Green_function_mizuno/part2.md
+DEBUG   -  Reading: Classes/Green_function_mizuno/part3.md
+DEBUG   -  Reading: Classes/Reading_circle_M1/summary.md
+DEBUG   -  Reading: Classes/Reading_circle_M1/summary1.md
+DEBUG   -  Reading: Classes/Reading_circle_M1/summary2.md
+DEBUG   -  Reading: Classes/Reading_circle_M1/summary3.md
+DEBUG   -  Reading: Classes/Reading_circle_M1/summary4.md
+DEBUG   -  Reading: Classes/Reading_circle_M1/summary5.md
+DEBUG   -  Reading: Classes/non-linear-phys/lec01.md
+WARNING -  Doc file 'Classes/non-linear-phys/lec01.md' contains a link 'img/energy_landscape.png', but the target 'Classes/non-linear-phys/img/energy_landscape.png' is not found among documentation files.
+DEBUG   -  Reading: Classes/non-linear-phys/lec02.md
+DEBUG   -  Reading: LAB/meeting/2025_10_24_kakoi.md
+DEBUG   -  Reading: Solid_State_Phys/overview.md
+DEBUG   -  Reading: Solid_State_Phys/basics/band_and_mass.md
+DEBUG   -  Reading: Solid_State_Phys/basics/bloch_theorem.md
+DEBUG   -  Reading: Solid_State_Phys/basics/crystal_lattice.md
+DEBUG   -  Reading: Solid_State_Phys/basics/fermi_surface.md
+DEBUG   -  Reading: Solid_State_Phys/basics/reciprocal_lattice.md
+DEBUG   -  Reading: Solid_State_Phys/magnetism/heisenberg.md
+DEBUG   -  Reading: Solid_State_Phys/magnetism/spin.md
+DEBUG   -  Reading: Solid_State_Phys/magnetism/spinwave.md
+DEBUG   -  Reading: Solid_State_Phys/magnetism/statistical_link.md
+DEBUG   -  Reading: Solid_State_Phys/magnetism/types.md
+DEBUG   -  Reading: Solid_State_Phys/models/comparison.md
+DEBUG   -  Reading: Solid_State_Phys/models/overview.md
+DEBUG   -  Reading: Solid_State_Phys/models/free_electron/overview.md
+DEBUG   -  Reading: Solid_State_Phys/models/hubbard/overview.md
+DEBUG   -  Reading: Solid_State_Phys/models/nearly_free_electron/overview.md
+DEBUG   -  Reading: Solid_State_Phys/models/tight_binding/derivation.md
+DEBUG   -  Reading: Solid_State_Phys/models/tight_binding/dispersion.md
+DEBUG   -  Reading: Solid_State_Phys/models/tight_binding/localization.md
+DEBUG   -  Reading: Solid_State_Phys/models/tight_binding/overview.md
+DEBUG   -  Reading: Solid_State_Phys/phonon/debye.md
+DEBUG   -  Reading: Solid_State_Phys/phonon/dispersion.md
+DEBUG   -  Reading: Solid_State_Phys/phonon/electron_phonon.md
+DEBUG   -  Reading: Solid_State_Phys/phonon/overview.md
+DEBUG   -  Reading: Solid_State_Phys/phonon/thermal_conductivity.md
+DEBUG   -  Reading: Solid_State_Phys/transport/drude.md
+DEBUG   -  Reading: Solid_State_Phys/transport/hall_effect.md
+DEBUG   -  Reading: Solid_State_Phys/transport/optical_response.md
+DEBUG   -  Reading: Solid_State_Phys/transport/semiconductor.md
+DEBUG   -  Reading: Solid_State_Phys/transport/thermoelectric.md
+DEBUG   -  Reading: perturbation/abst.md
+DEBUG   -  Reading: perturbation/fd/bloch.md
+DEBUG   -  Reading: perturbation/fd/dyson.md
+DEBUG   -  Reading: perturbation/fd/fd.md
+DEBUG   -  Reading: perturbation/fd/fd_interaction.md
+DEBUG   -  Reading: perturbation/fd/interaction.md
+DEBUG   -  Reading: perturbation/green/RAgreen.md
+DEBUG   -  Reading: perturbation/green/green.md
+DEBUG   -  Reading: perturbation/green/tempgreen.md
+DEBUG   -  Reading: perturbation/lrt/charge.md
+DEBUG   -  Reading: perturbation/lrt/others.md
+DEBUG   -  Reading: perturbation/lrt/rf.md
+DEBUG   -  Reading: perturbation/lrt/spin.md
+DEBUG   -  Reading: perturbation/rpa/abst.md
+DEBUG   -  Reading: perturbation/rpa/green_function.md
+DEBUG   -  Reading: perturbation/rpa/interaction.md
+DEBUG   -  Reading: perturbation/rpa/rpa.md
+DEBUG   -  Reading: perturbation/rpa/self-energy.md
+DEBUG   -  Reading: perturbation/rpa/spin_susceptibility.md
+DEBUG   -  Reading: perturbation/rpa/susceptibility.md
+DEBUG   -  Reading: programming/git/basics.md
+DEBUG   -  Reading: programming/git/branching.md
+DEBUG   -  Reading: programming/git/github.md
+DEBUG   -  Reading: programming/git/intro.md
+DEBUG   -  Reading: programming/git/troubleshooting.md
+DEBUG   -  Reading: programming/git/workflow.md
+DEBUG   -  Reading: programming/mkdocs/basics.md
+DEBUG   -  Reading: programming/mkdocs/intro.md
+DEBUG   -  Reading: programming/mkdocs/tips.md
+DEBUG   -  Reading: programming/mkdocs/usage.md
+DEBUG   -  Reading: programming/python/basics.md
+DEBUG   -  Reading: programming/python/intro.md
+DEBUG   -  Reading: programming/python/tips.md
+DEBUG   -  Reading: programming/python/usage.md
+DEBUG   -  Reading: programming/python/venv.md
+DEBUG   -  Reading: programming/remoteSSH/intro.md
+DEBUG   -  Reading: programming/remoteSSH/setup.md
+DEBUG   -  Reading: programming/remoteSSH/tips.md
+DEBUG   -  Reading: programming/remoteSSH/usage.md
+DEBUG   -  Reading: programming/vscode/intro.md
+DEBUG   -  Reading: programming/vscode/tips.md
+DEBUG   -  Reading: programming/vscode/usage.md
+DEBUG   -  Reading: research/overview.md
+DEBUG   -  Reading: research/dft/overview.md
+DEBUG   -  Reading: research/dft/wannier_rebuild.md
+DEBUG   -  Reading: research/dft/workflow.md
+DEBUG   -  Reading: research/honeycomb/band.md
+DEBUG   -  Reading: research/honeycomb/dos.md
+DEBUG   -  Reading: research/honeycomb/flex.md
+DEBUG   -  Reading: research/honeycomb/rpa.md
+DEBUG   -  Reading: research/square/band.md
+DEBUG   -  Reading: research/square/dos.md
+DEBUG   -  Reading: research/square/filling_mu.md
+DEBUG   -  Reading: research/square/flex.md
+DEBUG   -  Reading: research/square/green.md
+DEBUG   -  Reading: research/square/multiband.md
+DEBUG   -  Reading: research/square/rpa.md
+DEBUG   -  Copying static assets.
+DEBUG   -  Copying media file: 'extra.css'
+DEBUG   -  Copying media file: 'Classes/Green_function_mizuno/GreenFunction_diagram.pdf'
+DEBUG   -  Copying media file: 'Classes/Green_function_mizuno/GreenFunction_diagram.txt'
+DEBUG   -  Copying media file: 'Classes/Reading_circle_M1/part1.pdf'
+DEBUG   -  Copying media file: 'Classes/Reading_circle_M1/part2.pdf'
+DEBUG   -  Copying media file: 'Classes/non-linear-phys/lecture-note.pdf'
+DEBUG   -  Copying media file: 'LAB/journal_club/2025_10_24_PhysRevLett.100.076402.pdf'
+DEBUG   -  Copying media file: 'LAB/meeting/2025_10_24_kakoi.pdf'
+DEBUG   -  Copying media file: 'javascripts/config.js'
+DEBUG   -  Copying media file: 'javascripts/mathjax.js'
+DEBUG   -  Copying media file: 'research/square/figs/band_square.png'
+DEBUG   -  Copying media file: 'research/square/figs/band_square_3d.png'
+DEBUG   -  Copying media file: 'research/square/figs/dos_free_1d.png'
+DEBUG   -  Copying media file: 'research/square/figs/dos_free_2d.png'
+DEBUG   -  Copying media file: 'research/square/figs/dos_free_3d.png'
+DEBUG   -  Copying media file: 'research/square/figs/dos_free_overlay.png'
+DEBUG   -  Copying media file: 'research/square/figs/dos_square_tb.png'
+DEBUG   -  Copying media file: 'research/square/figs/dos_square_tb_mesh_compare.png'
+DEBUG   -  Copying media file: 'research/square/figs/filling_mu_tb.png'
+DEBUG   -  Copying media file: 'research/square/figs/mu_vs_filling_tb.png'
+DEBUG   -  Copying media file: 'research/square/scripts/dos_free_electron.py'
+DEBUG   -  Copying media file: 'research/square/scripts/dos_square_tb.py'
+DEBUG   -  Copying media file: 'research/square/scripts/filling_mu_tb.py'
+DEBUG   -  Copying media file: 'research/square/scripts/plot_band.py'
+DEBUG   -  Copying media file: 'research/square/scripts/plot_band_3d.py'
+DEBUG   -  Copying media file: 'assets/images/favicon.png'
+DEBUG   -  Copying media file: 'assets/javascripts/bundle.f55a23d4.min.js'
+DEBUG   -  Copying media file: 'assets/javascripts/bundle.f55a23d4.min.js.map'
+DEBUG   -  Copying media file: 'assets/javascripts/lunr/min/lunr.ar.min.js'
+DEBUG   -  Copying media file: 'assets/javascripts/lunr/min/lunr.da.min.js'
+DEBUG   -  Copying media file: 'assets/javascripts/lunr/min/lunr.de.min.js'
+DEBUG   -  Copying media file: 'assets/javascripts/lunr/min/lunr.du.min.js'
+DEBUG   -  Copying media file: 'assets/javascripts/lunr/min/lunr.el.min.js'
+DEBUG   -  Copying media file: 'assets/javascripts/lunr/min/lunr.es.min.js'
+DEBUG   -  Copying media file: 'assets/javascripts/lunr/min/lunr.fi.min.js'
+DEBUG   -  Copying media file: 'assets/javascripts/lunr/min/lunr.fr.min.js'
+DEBUG   -  Copying media file: 'assets/javascripts/lunr/min/lunr.he.min.js'
+DEBUG   -  Copying media file: 'assets/javascripts/lunr/min/lunr.hi.min.js'
+DEBUG   -  Copying media file: 'assets/javascripts/lunr/min/lunr.hu.min.js'
+DEBUG   -  Copying media file: 'assets/javascripts/lunr/min/lunr.hy.min.js'
+DEBUG   -  Copying media file: 'assets/javascripts/lunr/min/lunr.it.min.js'
+DEBUG   -  Copying media file: 'assets/javascripts/lunr/min/lunr.ja.min.js'
+DEBUG   -  Copying media file: 'assets/javascripts/lunr/min/lunr.jp.min.js'
+DEBUG   -  Copying media file: 'assets/javascripts/lunr/min/lunr.kn.min.js'
+DEBUG   -  Copying media file: 'assets/javascripts/lunr/min/lunr.ko.min.js'
+DEBUG   -  Copying media file: 'assets/javascripts/lunr/min/lunr.multi.min.js'
+DEBUG   -  Copying media file: 'assets/javascripts/lunr/min/lunr.nl.min.js'
+DEBUG   -  Copying media file: 'assets/javascripts/lunr/min/lunr.no.min.js'
+DEBUG   -  Copying media file: 'assets/javascripts/lunr/min/lunr.pt.min.js'
+DEBUG   -  Copying media file: 'assets/javascripts/lunr/min/lunr.ro.min.js'
+DEBUG   -  Copying media file: 'assets/javascripts/lunr/min/lunr.ru.min.js'
+DEBUG   -  Copying media file: 'assets/javascripts/lunr/min/lunr.sa.min.js'
+DEBUG   -  Copying media file: 'assets/javascripts/lunr/min/lunr.stemmer.support.min.js'
+DEBUG   -  Copying media file: 'assets/javascripts/lunr/min/lunr.sv.min.js'
+DEBUG   -  Copying media file: 'assets/javascripts/lunr/min/lunr.ta.min.js'
+DEBUG   -  Copying media file: 'assets/javascripts/lunr/min/lunr.te.min.js'
+DEBUG   -  Copying media file: 'assets/javascripts/lunr/min/lunr.th.min.js'
+DEBUG   -  Copying media file: 'assets/javascripts/lunr/min/lunr.tr.min.js'
+DEBUG   -  Copying media file: 'assets/javascripts/lunr/min/lunr.vi.min.js'
+DEBUG   -  Copying media file: 'assets/javascripts/lunr/min/lunr.zh.min.js'
+DEBUG   -  Copying media file: 'assets/javascripts/lunr/tinyseg.js'
+DEBUG   -  Copying media file: 'assets/javascripts/lunr/wordcut.js'
+DEBUG   -  Copying media file: 'assets/javascripts/workers/search.973d3a69.min.js'
+DEBUG   -  Copying media file: 'assets/javascripts/workers/search.973d3a69.min.js.map'
+DEBUG   -  Copying media file: 'assets/stylesheets/main.84d31ad4.min.css'
+DEBUG   -  Copying media file: 'assets/stylesheets/main.84d31ad4.min.css.map'
+DEBUG   -  Copying media file: 'assets/stylesheets/palette.06af60db.min.css'
+DEBUG   -  Copying media file: 'assets/stylesheets/palette.06af60db.min.css.map'
+DEBUG   -  Building theme template: 404.html
+DEBUG   -  Building theme template: sitemap.xml
+DEBUG   -  Gzipping template: sitemap.xml
+DEBUG   -  Building markdown pages.
+DEBUG   -  Building page index.md
+DEBUG   -  Running `page_context` event from plugin 'material/search'
+DEBUG   -  Building page notes.md
+DEBUG   -  Running `page_context` event from plugin 'material/search'
+DEBUG   -  Building page Classes/Green_function_mizuno/chapter1_green_function.md
+DEBUG   -  Running `page_context` event from plugin 'material/search'
+DEBUG   -  Building page Classes/Green_function_mizuno/chapter2_diagram.md
+DEBUG   -  Running `page_context` event from plugin 'material/search'
+DEBUG   -  Building page Classes/Green_function_mizuno/newpart3.md
+DEBUG   -  Running `page_context` event from plugin 'material/search'
+DEBUG   -  Building page Classes/Green_function_mizuno/part1.md
+DEBUG   -  Running `page_context` event from plugin 'material/search'
+DEBUG   -  Building page Classes/Green_function_mizuno/part2.md
+DEBUG   -  Running `page_context` event from plugin 'material/search'
+DEBUG   -  Building page Classes/Green_function_mizuno/part3.md
+DEBUG   -  Running `page_context` event from plugin 'material/search'
+DEBUG   -  Building page Classes/Reading_circle_M1/summary.md
+DEBUG   -  Running `page_context` event from plugin 'material/search'
+DEBUG   -  Building page Classes/Reading_circle_M1/summary1.md
+DEBUG   -  Running `page_context` event from plugin 'material/search'
+DEBUG   -  Building page Classes/Reading_circle_M1/summary2.md
+DEBUG   -  Running `page_context` event from plugin 'material/search'
+DEBUG   -  Building page Classes/Reading_circle_M1/summary3.md
+DEBUG   -  Running `page_context` event from plugin 'material/search'
+DEBUG   -  Building page Classes/Reading_circle_M1/summary4.md
+DEBUG   -  Running `page_context` event from plugin 'material/search'
+DEBUG   -  Building page Classes/Reading_circle_M1/summary5.md
+DEBUG   -  Running `page_context` event from plugin 'material/search'
+DEBUG   -  Building page Classes/non-linear-phys/lec01.md
+DEBUG   -  Running `page_context` event from plugin 'material/search'
+DEBUG   -  Building page Classes/non-linear-phys/lec02.md
+DEBUG   -  Running `page_context` event from plugin 'material/search'
+DEBUG   -  Building page LAB/meeting/2025_10_24_kakoi.md
+DEBUG   -  Running `page_context` event from plugin 'material/search'
+DEBUG   -  Building page Solid_State_Phys/overview.md
+DEBUG   -  Running `page_context` event from plugin 'material/search'
+DEBUG   -  Building page Solid_State_Phys/basics/band_and_mass.md
+DEBUG   -  Running `page_context` event from plugin 'material/search'
+DEBUG   -  Building page Solid_State_Phys/basics/bloch_theorem.md
+DEBUG   -  Running `page_context` event from plugin 'material/search'
+DEBUG   -  Building page Solid_State_Phys/basics/crystal_lattice.md
+DEBUG   -  Running `page_context` event from plugin 'material/search'
+DEBUG   -  Building page Solid_State_Phys/basics/fermi_surface.md
+DEBUG   -  Running `page_context` event from plugin 'material/search'
+DEBUG   -  Building page Solid_State_Phys/basics/reciprocal_lattice.md
+DEBUG   -  Running `page_context` event from plugin 'material/search'
+DEBUG   -  Building page Solid_State_Phys/magnetism/heisenberg.md
+DEBUG   -  Running `page_context` event from plugin 'material/search'
+DEBUG   -  Building page Solid_State_Phys/magnetism/spin.md
+DEBUG   -  Running `page_context` event from plugin 'material/search'
+DEBUG   -  Building page Solid_State_Phys/magnetism/spinwave.md
+DEBUG   -  Running `page_context` event from plugin 'material/search'
+DEBUG   -  Building page Solid_State_Phys/magnetism/statistical_link.md
+DEBUG   -  Running `page_context` event from plugin 'material/search'
+DEBUG   -  Building page Solid_State_Phys/magnetism/types.md
+DEBUG   -  Running `page_context` event from plugin 'material/search'
+DEBUG   -  Building page Solid_State_Phys/models/comparison.md
+DEBUG   -  Running `page_context` event from plugin 'material/search'
+DEBUG   -  Building page Solid_State_Phys/models/overview.md
+DEBUG   -  Running `page_context` event from plugin 'material/search'
+DEBUG   -  Building page Solid_State_Phys/models/free_electron/overview.md
+DEBUG   -  Running `page_context` event from plugin 'material/search'
+DEBUG   -  Building page Solid_State_Phys/models/hubbard/overview.md
+DEBUG   -  Running `page_context` event from plugin 'material/search'
+DEBUG   -  Building page Solid_State_Phys/models/nearly_free_electron/overview.md
+DEBUG   -  Running `page_context` event from plugin 'material/search'
+DEBUG   -  Building page Solid_State_Phys/models/tight_binding/derivation.md
+DEBUG   -  Running `page_context` event from plugin 'material/search'
+DEBUG   -  Building page Solid_State_Phys/models/tight_binding/dispersion.md
+DEBUG   -  Running `page_context` event from plugin 'material/search'
+DEBUG   -  Building page Solid_State_Phys/models/tight_binding/localization.md
+DEBUG   -  Running `page_context` event from plugin 'material/search'
+DEBUG   -  Building page Solid_State_Phys/models/tight_binding/overview.md
+DEBUG   -  Running `page_context` event from plugin 'material/search'
+DEBUG   -  Building page Solid_State_Phys/phonon/debye.md
+DEBUG   -  Running `page_context` event from plugin 'material/search'
+DEBUG   -  Building page Solid_State_Phys/phonon/dispersion.md
+DEBUG   -  Running `page_context` event from plugin 'material/search'
+DEBUG   -  Building page Solid_State_Phys/phonon/electron_phonon.md
+DEBUG   -  Running `page_context` event from plugin 'material/search'
+DEBUG   -  Building page Solid_State_Phys/phonon/overview.md
+DEBUG   -  Running `page_context` event from plugin 'material/search'
+DEBUG   -  Building page Solid_State_Phys/phonon/thermal_conductivity.md
+DEBUG   -  Running `page_context` event from plugin 'material/search'
+DEBUG   -  Building page Solid_State_Phys/transport/drude.md
+DEBUG   -  Running `page_context` event from plugin 'material/search'
+DEBUG   -  Building page Solid_State_Phys/transport/hall_effect.md
+DEBUG   -  Running `page_context` event from plugin 'material/search'
+DEBUG   -  Building page Solid_State_Phys/transport/optical_response.md
+DEBUG   -  Running `page_context` event from plugin 'material/search'
+DEBUG   -  Building page Solid_State_Phys/transport/semiconductor.md
+DEBUG   -  Running `page_context` event from plugin 'material/search'
+DEBUG   -  Building page Solid_State_Phys/transport/thermoelectric.md
+DEBUG   -  Running `page_context` event from plugin 'material/search'
+DEBUG   -  Building page perturbation/abst.md
+DEBUG   -  Running `page_context` event from plugin 'material/search'
+DEBUG   -  Building page perturbation/fd/bloch.md
+DEBUG   -  Running `page_context` event from plugin 'material/search'
+DEBUG   -  Building page perturbation/fd/dyson.md
+DEBUG   -  Running `page_context` event from plugin 'material/search'
+DEBUG   -  Building page perturbation/fd/fd.md
+DEBUG   -  Running `page_context` event from plugin 'material/search'
+DEBUG   -  Building page perturbation/fd/fd_interaction.md
+DEBUG   -  Running `page_context` event from plugin 'material/search'
+DEBUG   -  Building page perturbation/fd/interaction.md
+DEBUG   -  Running `page_context` event from plugin 'material/search'
+DEBUG   -  Building page perturbation/green/RAgreen.md
+DEBUG   -  Running `page_context` event from plugin 'material/search'
+DEBUG   -  Building page perturbation/green/green.md
+DEBUG   -  Running `page_context` event from plugin 'material/search'
+DEBUG   -  Building page perturbation/green/tempgreen.md
+DEBUG   -  Running `page_context` event from plugin 'material/search'
+DEBUG   -  Building page perturbation/lrt/charge.md
+DEBUG   -  Running `page_context` event from plugin 'material/search'
+DEBUG   -  Building page perturbation/lrt/others.md
+DEBUG   -  Running `page_context` event from plugin 'material/search'
+DEBUG   -  Building page perturbation/lrt/rf.md
+DEBUG   -  Running `page_context` event from plugin 'material/search'
+DEBUG   -  Building page perturbation/lrt/spin.md
+DEBUG   -  Running `page_context` event from plugin 'material/search'
+DEBUG   -  Building page perturbation/rpa/abst.md
+DEBUG   -  Running `page_context` event from plugin 'material/search'
+DEBUG   -  Building page perturbation/rpa/green_function.md
+DEBUG   -  Running `page_context` event from plugin 'material/search'
+DEBUG   -  Building page perturbation/rpa/interaction.md
+DEBUG   -  Running `page_context` event from plugin 'material/search'
+DEBUG   -  Building page perturbation/rpa/rpa.md
+DEBUG   -  Running `page_context` event from plugin 'material/search'
+DEBUG   -  Building page perturbation/rpa/self-energy.md
+DEBUG   -  Running `page_context` event from plugin 'material/search'
+DEBUG   -  Building page perturbation/rpa/spin_susceptibility.md
+DEBUG   -  Running `page_context` event from plugin 'material/search'
+DEBUG   -  Building page perturbation/rpa/susceptibility.md
+DEBUG   -  Running `page_context` event from plugin 'material/search'
+DEBUG   -  Building page programming/git/basics.md
+DEBUG   -  Running `page_context` event from plugin 'material/search'
+DEBUG   -  Building page programming/git/branching.md
+DEBUG   -  Running `page_context` event from plugin 'material/search'
+DEBUG   -  Building page programming/git/github.md
+DEBUG   -  Running `page_context` event from plugin 'material/search'
+DEBUG   -  Building page programming/git/intro.md
+DEBUG   -  Running `page_context` event from plugin 'material/search'
+DEBUG   -  Building page programming/git/troubleshooting.md
+DEBUG   -  Running `page_context` event from plugin 'material/search'
+DEBUG   -  Building page programming/git/workflow.md
+DEBUG   -  Running `page_context` event from plugin 'material/search'
+DEBUG   -  Building page programming/mkdocs/basics.md
+DEBUG   -  Running `page_context` event from plugin 'material/search'
+DEBUG   -  Building page programming/mkdocs/intro.md
+DEBUG   -  Running `page_context` event from plugin 'material/search'
+DEBUG   -  Building page programming/mkdocs/tips.md
+DEBUG   -  Running `page_context` event from plugin 'material/search'
+DEBUG   -  Building page programming/mkdocs/usage.md
+DEBUG   -  Running `page_context` event from plugin 'material/search'
+DEBUG   -  Building page programming/python/basics.md
+DEBUG   -  Running `page_context` event from plugin 'material/search'
+DEBUG   -  Building page programming/python/intro.md
+DEBUG   -  Running `page_context` event from plugin 'material/search'
+DEBUG   -  Building page programming/python/tips.md
+DEBUG   -  Running `page_context` event from plugin 'material/search'
+DEBUG   -  Building page programming/python/usage.md
+DEBUG   -  Running `page_context` event from plugin 'material/search'
+DEBUG   -  Building page programming/python/venv.md
+DEBUG   -  Running `page_context` event from plugin 'material/search'
+DEBUG   -  Building page programming/remoteSSH/intro.md
+DEBUG   -  Running `page_context` event from plugin 'material/search'
+DEBUG   -  Building page programming/remoteSSH/setup.md
+DEBUG   -  Running `page_context` event from plugin 'material/search'
+DEBUG   -  Building page programming/remoteSSH/tips.md
+DEBUG   -  Running `page_context` event from plugin 'material/search'
+DEBUG   -  Building page programming/remoteSSH/usage.md
+DEBUG   -  Running `page_context` event from plugin 'material/search'
+DEBUG   -  Building page programming/vscode/intro.md
+DEBUG   -  Running `page_context` event from plugin 'material/search'
+DEBUG   -  Building page programming/vscode/tips.md
+DEBUG   -  Running `page_context` event from plugin 'material/search'
+DEBUG   -  Building page programming/vscode/usage.md
+DEBUG   -  Running `page_context` event from plugin 'material/search'
+DEBUG   -  Building page research/overview.md
+DEBUG   -  Running `page_context` event from plugin 'material/search'
+DEBUG   -  Building page research/dft/overview.md
+DEBUG   -  Running `page_context` event from plugin 'material/search'
+DEBUG   -  Building page research/dft/wannier_rebuild.md
+DEBUG   -  Running `page_context` event from plugin 'material/search'
+DEBUG   -  Building page research/dft/workflow.md
+DEBUG   -  Running `page_context` event from plugin 'material/search'
+DEBUG   -  Building page research/honeycomb/band.md
+DEBUG   -  Running `page_context` event from plugin 'material/search'
+DEBUG   -  Building page research/honeycomb/dos.md
+DEBUG   -  Running `page_context` event from plugin 'material/search'
+DEBUG   -  Building page research/honeycomb/flex.md
+DEBUG   -  Running `page_context` event from plugin 'material/search'
+DEBUG   -  Building page research/honeycomb/rpa.md
+DEBUG   -  Running `page_context` event from plugin 'material/search'
+DEBUG   -  Building page research/square/band.md
+DEBUG   -  Running `page_context` event from plugin 'material/search'
+DEBUG   -  Building page research/square/dos.md
+DEBUG   -  Running `page_context` event from plugin 'material/search'
+DEBUG   -  Building page research/square/filling_mu.md
+DEBUG   -  Running `page_context` event from plugin 'material/search'
+DEBUG   -  Building page research/square/flex.md
+DEBUG   -  Running `page_context` event from plugin 'material/search'
+DEBUG   -  Building page research/square/green.md
+DEBUG   -  Running `page_context` event from plugin 'material/search'
+DEBUG   -  Building page research/square/multiband.md
+DEBUG   -  Running `page_context` event from plugin 'material/search'
+DEBUG   -  Building page research/square/rpa.md
+DEBUG   -  Running `page_context` event from plugin 'material/search'
+DEBUG   -  Running `post_build` event from plugin 'material/search'
+INFO    -  Documentation built in 1.18 seconds
+INFO    -  [23:41:48] Serving on http://127.0.0.1:8000/

@@ -91,6 +91,8 @@ nav:
     - LAB:
       - ミーティング資料:
           - 2025-10-24 栫: LAB/meeting/2025_10_24_kakoi.md
+      - ジャーナルクラブ:
+          - 2025-10-24 PRL 100 076402: LAB/journal_club/2025_10_24_PhysRevLett.100.076402.md
 
     - 量子多体系のための摂動論:
       - 概要: perturbation/abst.md
