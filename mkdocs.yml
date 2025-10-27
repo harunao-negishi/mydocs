@@ -172,7 +172,9 @@ nav:
           - 多軌道に拡張する: research/square/multiband.md
           - 状態密度 (DOS): research/square/dos.md
           - 充填率と化学ポテンシャル: research/square/filling_mu.md
+          - 数値実装パイプライン: research/square/numeric_pipeline.md
           - グリーン関数: research/square/green.md
+          - 感受率 (非相互作用): research/square/susceptibility.md
           - 感受率とRPA: research/square/rpa.md
           - FLEX計算: research/square/flex.md
 

@@ -36,7 +36,7 @@ $$
 \boxed{\; n(\mu,T)=g_s\int_{-\infty}^{\infty} D(E)\,f(E,\mu,T)\,dE\;}
 $$
 
-です。このとき、n~Nに見えるかもしれませんが、ここでいうDOSは単位法当たりの
+です。このとき、n~Nに見えるかもしれませんが、ここでいうDOSは単位胞当たりでの、エネルギーバンドに対する状態密度であることに注意してください。つまり、積分全体は「単位胞あたりの電子数」を与えます。
 
 特に \(T=0\) の場合は
 
@@ -50,7 +50,7 @@ $$
 
 ---
 
-## 3. 2D 正方格子（最近接ホッピング）の特徴
+## 3. 2D 正方格子（最近接ホッピング）の\(\mu \)–\(n\) 関係
 
 最近接ホッピングの単純正方格子では分散は
 
@@ -62,12 +62,12 @@ $$
 
 ### 3.1 \(\mu\)–\(n\) の関係
 
-図: `figs/mu_vs_filling_tb.png`
+![μ vs filling for 2D square TB](figs/mu_vs_filling_tb.png)
 
 - \(T=0\) では \(dn/d\mu=g_s D(\mu)\)。したがって DOS が大きい（van Hove）箇所では \(\mu\) があまり動かず、\(\dfrac{d\mu}{dn}=1/(g_s D(\mu))\) が小さくなります。
 - 有限温度ではフェルミ分布が滑らかになるため、\(n(\mu,T)\) も滑らかになります。
 
-図: `figs/dos_square_tb.png`
+![2D square TB DOS](figs/dos_square_tb.png)
 
 ---
 
@@ -122,7 +122,7 @@ def n_of_mu(Ek, mu, kBT, gs):
 
 ### 補記: グラフ
 
-図: `figs/filling_mu_tb.png`
+![filling vs μ for 2D square TB](figs/filling_mu_tb.png)
 
 ---
 
