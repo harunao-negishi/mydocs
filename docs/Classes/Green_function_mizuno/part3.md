@@ -3,47 +3,55 @@
 - 元資料: `GreenFunction_diagram.pdf`
 - 範囲: 第3章（2体Green関数の定義から自己エネルギーまで）
 
----
-
 ## 3.1 2体グリーン関数の定義
 
 2体グリーン関数は 1 体グリーン関数を拡張し、粒子間相互作用を直接扱うための基本量である。虚時間表示での定義は
 
-\[
+$$
 G^{(2)}_{\alpha\beta\gamma\lambda}(r_1,r_2,r_3,r_4;\tau_1,\tau_2,\tau_3,\tau_4)
-= \left\langle T_{\tau}
-	c_{r_1\alpha}(\tau_1) c_{r_2\beta}(\tau_2)
-	c^{\dagger}_{r_3\gamma}(\tau_3) c^{\dagger}_{r_4\lambda}(\tau_4)
-\right\rangle,
-\]
+= \Big\langle T_{\tau}\,
+ c_{r_1\alpha}(\tau_1)\, c_{r_2\beta}(\tau_2)\,
+ c^{\dagger}_{r_3\gamma}(\tau_3)\, c^{\dagger}_{r_4\lambda}(\tau_4)
+\Big\rangle,\tag{3.1}
+$$
 
-が式(3.1)に相当する。トレースの巡回性を利用すると時間変数を 1 つ減らせるため、式(3.2) では $\tau_3$ を原点に取った3変数表示が用いられる。空間並進対称性を仮定すると、$r_3$ を基準サイトとして相対座標の関数へ書き換えられる。
+が式(3.1)に相当する。トレースの巡回性を利用すると時間変数を 1 つ減らせるため、$\tau_3$ を原点に取った 3 変数表示を用いる：
+
+$$
+G^{(2)}_{\alpha\beta\gamma\lambda}(r_1,r_2,r_3,r_4;\tau_1,\tau_2,\tau_4)
+= \big\langle T_{\tau}\, c_{r_1\alpha}(\tau_1)\, c_{r_2\beta}(\tau_2)\, c^{\dagger}_{r_4\lambda}(\tau_4)\, c^{\dagger}_{r_3\gamma}(0) \big\rangle.\tag{3.2}
+$$
+
+空間並進対称性を仮定すると、$r_3$ を基準サイトとして相対座標の関数へ書き換えられる：
+
+$$
+G^{(2)}_{\alpha\beta\gamma\lambda}(r_1,r_2,r_4;\tau_1,\tau_2,\tau_4)
+= \big\langle T_{\tau}\, c_{(r_1-r_3)\alpha}(\tau_1)\, c_{(r_2-r_3)\beta}(\tau_2)\, c^{\dagger}_{(r_4-r_3)\lambda}(\tau_4)\, c^{\dagger}_{0\gamma}(0) \big\rangle.
+$$
 
 空間・時間座標をまとめた $x_i = (r_i,\tau_i)$、対応する一般化運動量 $k_i = (k_i, i\omega_{n_i})$ を導入すると、Fourier 変換は
 
-\[
+$$
 G^{(2)}_{\alpha\beta\gamma\lambda}(k_1,k_2,k_4)
-= \int dx_1 dx_2 dx_4\; G^{(2)}_{\alpha\beta\gamma\lambda}(x_1,x_2,x_4)
-	e^{ik_1 x_1} e^{ik_2 x_2} e^{ik_4 x_4}
-\]
+= \int dx_1\, dx_2\, dx_4\; G^{(2)}_{\alpha\beta\gamma\lambda}(x_1,x_2,x_4)
+\, e^{ik_1 x_1}\, e^{ik_2 x_2}\, e^{ik_4 x_4}.\tag{3.3}
+$$
 
-（式(3.3)）と書ける。粒子-正孔対が運ぶボソン量 $q=(q,\nu_m)$ を明示するために、
+粒子–正孔対が運ぶボソン量 $q=(q,\nu_m)$ を明示するために、
 
-\[
-k_1 \to k,
-\qquad k_2 \to -k-q,
-\qquad k_4 \to k'+q
-\]
+$$
+k_1 \to k,\qquad k_2 \to -k-q,\qquad k_4 \to k'+q,\tag{3.6}
+$$
 
-（式(3.6)）と変換し、最終的に
+のような変数変換を行うと最終的に
 
-\[
+$$
 G^{(2)}_{\alpha\beta\gamma\lambda}(k,k',q)
-= \int dx_1 dx_2 dx_4\; G^{(2)}_{\alpha\beta\gamma\lambda}(x_1,x_2,x_4)
-	e^{ikx_1} e^{-i(k+q)x_2} e^{i(k'+q)x_4}
-\]
+= \int dx_1\, dx_2\, dx_4\; G^{(2)}_{\alpha\beta\gamma\lambda}(x_1,x_2,x_4)
+\, e^{ikx_1}\, e^{-i(k+q)x_2}\, e^{i(k'+q)x_4}.\tag{3.7}
+$$
 
-（式(3.7)）を得る。脚注※25では添字の並べ方が内部自由度と結び付いていること、※26では時間変数の定義域が変化することが注意されている。
+脚注※25では添字の並べ方が内部自由度と結び付いていること、※26では時間変数の定義域が変化することが注意されている。
 
 ## 3.2 2体グリーン関数のダイアグラム構造
 
@@ -212,29 +220,69 @@ F = \Gamma_l + \Gamma_l \chi^{l}_0 F
 
 ## 3.3 感受率
 
-2 体 Green 関数から切断可能な項を引いたもの
+感受率（susceptibility）は、系が外場や摂動に対してどのように応答するかを表す物理量であり、2体グリーン関数から独立粒子成分を除いたものとして定義されます。
+
+その一般化された形は次式で与えられます：
 
 \[
-\chi^{\text{ph}}_{\alpha\beta\gamma\lambda}(x_1,x_2,x_3,x_4)
- = - G_{\alpha\gamma}(x_1,x_3) G_{\lambda\beta}(x_4,x_2)
+\begin{aligned}
+\chi^{\text{ph}}_{\alpha\beta\gamma\lambda}(x_1,x_2,x_3,x_4) = - G_{\alpha\gamma}(x_1,x_3)\, G_{\lambda\beta}(x_4,x_2)\\
+ - \sum_{\alpha'\beta'\gamma'\lambda'} \int dx'_1 dx'_2 dx'_3 dx'_4\;
+ G_{\alpha\alpha'}(x_1,x'_1)\, G_{\beta'\beta}(x'_2,x_2)\times F_{\alpha'\beta'\gamma'\lambda'}(x'_1,x'_2,x'_3,x'_4)\,
+ G_{\gamma'\gamma}(x'_3,x_3)\, G_{\lambda\lambda'}(x_4,x'_4)
+\end{aligned}
 \]
 
-を一般化感受率と呼ぶ（式(3.38)）。Fourier 空間では
+で与えられます。
+
+--- 
+
+### 補足
+
+定義に従えば、位置空間の ph 感受率は
+
+$$
+\chi^{\text{ph}}_{\alpha\beta\gamma\lambda}(x_1,x_2,x_3,x_4)
+= G_{\alpha\beta}(x_1,x_2)\, G_{\gamma\lambda}(x_3,x_4)
+ - G_{\alpha\gamma}(x_1,x_3)\, G_{\beta\lambda}(x_2,x_4).
+$$
+
+最も簡単な例として単一軌道系を考え、\(\alpha,\beta\) を上向きスピン、\(\gamma,\lambda\) を下向きスピンとし、時間順序 \(\tau_1<\tau_2\), \(\tau_3>\tau_4\) を保ったまま \(x_1,x_2,x_3,x_4\to 0\) とすると、
+
+$$
+\chi^{\text{ph}} \;\longrightarrow\; \langle n_\uparrow n_\downarrow \rangle
+ - \langle n_\uparrow \rangle\, \langle n_\downarrow \rangle \tag{3.40}
+$$
+
+のように密度揺らぎが現れる。この静的な揺らぎを動的に一般化したものが感受率である。また、\(\alpha,\beta,\gamma,\lambda\) の選び方によって、スピン揺らぎ・超伝導揺らぎ・軌道揺らぎなど様々な感受率を定義できる。最も一般的な形は式 (3.38) に相当するため、これを一般化感受率と呼ぶ。
+
+Fourier 空間では
 
 \[
 \chi^{\text{ph}}_{\alpha\beta\gamma\lambda}(k,k',q)
  = - G_{\alpha\gamma}(k) G_{\lambda\beta}(k+q) \delta_{k,k'}
- + \sum_{\alpha'\beta'\gamma'\lambda'} G_{\alpha\alpha'}(k) G_{\beta'\beta}(k+q)
+ - \sum_{\alpha'\beta'\gamma'\lambda'} G_{\alpha\alpha'}(k) G_{\beta'\beta}(k+q)
 	 F_{\alpha'\beta'\gamma'\lambda'}(k,k',q)
 	 G_{\gamma'\gamma}(k') G_{\lambda\lambda'}(k'+q)
 \]
 
-（式(3.39)）で、他チャネルも crossing により得られる。pp チャネルの一般化感受率は
+ほかのチャネルでの感受率がどう描けるかを見ていこう。ph チャネルは D→C の変換を用いると次の表式でも書ける：
+
+\[
+\chi^{\text{ph}}_{\alpha\beta\gamma\lambda}(k,k',q)
+= G_{\alpha\beta}(k)\, G_{\lambda\gamma}(k')\, \delta_{q,0}
+- \sum_{\alpha'\beta'\gamma'\lambda'} G_{\alpha\alpha'}(k)\, G_{\gamma'\gamma}(k')\,
+  F_{\alpha'\gamma'\beta'\lambda'}\bigl(k,\, k+q,\, k'-k\bigr)
+	\, G_{\beta'\beta}(k+q)\, G_{\lambda\lambda'}(k'+q)
+	ag{3.42}
+\]
+
+pp チャネルの一般化感受率は、pp 表現の 2 体グリーン関数 (3.21) の最初の項を除くと
 
 \[
 \chi^{\text{pp}}_{\alpha\beta\gamma\lambda}(k,k',q)
  = G_{\alpha\gamma}(k) G_{\beta\lambda}(-k-q) \delta_{k,k'}
- + \sum_{\alpha'\beta'\gamma'\lambda'} G_{\alpha\alpha'}(k) G_{\beta\beta'}(-k-q)
+ - \sum_{\alpha'\beta'\gamma'\lambda'} G_{\alpha\alpha'}(k) G_{\beta\beta'}(-k-q)
 	 F^{\mathrm{pp}}_{\alpha'\beta'\gamma'\lambda'}(k,k',q)
 	 G_{\gamma'\gamma}(k') G_{\lambda'\lambda}(-k'-q)
 \]
