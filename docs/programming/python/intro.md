@@ -1,4 +1,4 @@
-# Python環境セットアップまとめ
+# Python環境セットアップまとめ（VScodeも）
 
 Pythonについて、初学者向けにその始め方や使い方を解説して、また何か問題が発生すればそれらも適宜説明していきたいと思っています。
 
@@ -8,6 +8,7 @@ VS Code (Visual Studio Code) は、**Microsoftが提供する無料のソース�
 ここでは、リモート環境・ローある環境どちらでもVScodeを使ってコーディングするのが便利なので、まずはその始め方を解説します。
 
 始め方は非常にシンプルで、以下のUrlからVS Codeをインストールし、Python拡張機能を追加するだけです。
+
 - VS Codeのインストール：[公式サイト](https://code.visualstudio.com/)
 - Python拡張機能のインストール：VS Codeの拡張機能検索で「Python」を選択
 
@@ -32,14 +33,15 @@ Pythonのインストール（ここでは主にWindowsに限って話を進め�
 
 “Add Python to PATH”にチェックを入れると、pythonのインストール先は
 
-```bash
+``` bash
 C:\Users\<ユーザー名>\AppData\Local\Programs\Python\Python<バージョン>\
 ```
+
 になります。
 
 その中身はこんな感じ：
 
-```
+``` bash
 │  python.exe        ← 実行ファイル（これが動く）
 │  pip.exe           ← ライブラリ管理コマンド
 │
@@ -55,9 +57,9 @@ C:\Users\<ユーザー名>\AppData\Local\Programs\Python\Python<バージョン>
 これにチェックを入れると、
 次の2つのパスが Windows の環境変数 PATH に自動追加されます。
 
-```
-C:\Users\<ユーザー名>\AppData\Local\Programs\Python\Python312\
-C:\Users\<ユーザー名>\AppData\Local\Programs\Python\Python312\Scripts\
+``` bash
+C:\Users\<ユーザー名>\AppData\Local\Programs\Python\Python313\
+C:\Users\<ユーザー名>\AppData\Local\Programs\Python\Python313\Scripts\
 ```
 
 その結果：
@@ -70,8 +72,27 @@ C:\Users\<ユーザー名>\AppData\Local\Programs\Python\Python312\Scripts\
 
 ```bash
 python --version
-``` 
-これでPythonのバージョンが表示されれば、インストールは成功です。
+pip --version
+```
+
+これでPython及びpipのバージョンが表示されれば、インストールは成功です。
+なお、二つのパスの確認方法は、
+
+```bash
+where.exe python
+where.exe pip
+```
+
+コマンドを実行して、表示されるパスが上記の二つと一致しているか確認してください。
+なお、パワーシェルなら上記でパスが表示されますが、コマンドプロンプトなら where python と where pip としてください。
+
+または、
+
+```bash
+echo %PATH%
+```
+
+コマンドを実行して、表示される環境変数PATHの中に上記の二つのパスが含まれているか確認してください。
 
 ### リモート環境での始め方
 
@@ -79,11 +100,11 @@ python --version
 
 
 
-### 仮想環境の作成例
-```powershell
-python -m venv venv
-```
-作成した仮想環境は、VS Codeで「Pythonインタープリターの選択」から利用可能
 
----
-詳しいセットアップやサンプルコードは、tips.mdやusage.mdに記載予定です。
+### 仮想環境の作成
+
+以上の説明は、グローバルな環境にPythonをインストールして使う場合の話です。しかし、プロジェクトごとに異なるパッケージやバージョンを管理したい場合、仮想環境（venv）を利用するのが一般的です。
+
+グローバルを使いながら開発を行うこともできますが、パッケージのバージョン競合や依存関係の問題が発生しやすくなります。そこで、プロジェクトごとに独立した仮想環境を作成し、その中で必要なパッケージをインストール・管理する方法が推奨されます。
+
+仮想環境に関する詳しい手順は、[venv.md](programming/python/venv.md) にまとめていますので、そちらを参照してください。
