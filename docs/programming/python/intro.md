@@ -1,35 +1,84 @@
-# Pythonとは
-汎用プログラミング言語で、初心者からプロまで幅広く使われています。
+# Python環境セットアップまとめ
 
-## 主な用途
-- データ分析
-- Web開発
-- 自動化
-- 機械学習
+Pythonについて、初学者向けにその始め方や使い方を解説して、また何か問題が発生すればそれらも適宜説明していきたいと思っています。
 
-## 対象ユーザー
-- プログラミング初心者
-- データサイエンティスト
-- Webエンジニア
+## VScodeの始め方
 
-## 始め方（VS Code編）
-1. VS Codeをインストール
-2. Python拡張機能を追加
-3. Pythonをインストール（公式サイトから）
-4. VS Codeで新しいPythonファイルを作成し、`print('Hello, World!')`などを書いて実行
+VS Code (Visual Studio Code) は、**Microsoftが提供する無料のソースコードエディタ**です。Pythonの開発にも非常に適しています。
+ここでは、リモート環境・ローある環境どちらでもVScodeを使ってコーディングするのが便利なので、まずはその始め方を解説します。
 
----
-### Windowsで必要な準備
-- Pythonのインストール：[公式サイト](https://www.python.org/downloads/windows/)からダウンロード
+始め方は非常にシンプルで、以下のUrlからVS Codeをインストールし、Python拡張機能を追加するだけです。
 - VS Codeのインストール：[公式サイト](https://code.visualstudio.com/)
 - Python拡張機能のインストール：VS Codeの拡張機能検索で「Python」を選択
 
-```powershell
-# Pythonのバージョン確認
-python --version
+なお、ここでいう拡張機能とは、VS Codeの機能を拡張するためのプラグインのことです。Python拡張機能をインストールすることで、Pythonコードのシンタックスハイライト、コード補完、デバッグなどが利用可能になります。つまり、**見栄えをよくして、コーディングの手助けをしてくれる**のであって、Python自体の実行環境を提供するわけではありません。つまり拡張機能がなくてもPython自体は使えますが、ないと開発がやりづらいので、ほぼ必須です。
+
+実際に書いたコードを実行するためには、Pythonの実行環境が必要です。これはローカル環境にPythonをインストールするか、リモートサーバーにSSH接続してPythonを利用することになります。以下で詳しく解説します。
+
+## Pythonの始め方について
+
+pythonの始め方については、リモート環境とローカル環境とで異なります。
+
+### ローカル環境での始め方
+
+Pythonのインストール（ここでは主にWindowsに限って話を進めます。）
+[公式サイト](https://www.python.org/downloads/windows/)からインストーラーをダウンロードしてインストールします。基本的にこの3つの処理が行われます。
+
+- Python本体（実行ファイル）を配置
+
+- Windows環境変数 PATH の設定
+
+- 標準ライブラリ + pip の導入
+
+“Add Python to PATH”にチェックを入れると、pythonのインストール先は
+
+```bash
+C:\Users\<ユーザー名>\AppData\Local\Programs\Python\Python<バージョン>\
+```
+になります。
+
+その中身はこんな感じ：
+
+```
+│  python.exe        ← 実行ファイル（これが動く）
+│  pip.exe           ← ライブラリ管理コマンド
+│
+├─ Lib\              ← 標準ライブラリ
+├─ Scripts\          ← pipで入れた実行スクリプト
+└─ DLLs\             ← C拡張用のDLL
 ```
 
----
+インストール時に
+☑ 「Add Python to PATH」
+というチェックボックスがあります。
+
+これにチェックを入れると、
+次の2つのパスが Windows の環境変数 PATH に自動追加されます。
+
+```
+C:\Users\<ユーザー名>\AppData\Local\Programs\Python\Python312\
+C:\Users\<ユーザー名>\AppData\Local\Programs\Python\Python312\Scripts\
+```
+
+その結果：
+
+- コマンドプロンプトで python と打つと python.exe が実行される
+
+- pip コマンドも Scripts\pip.exe を参照する
+
+インストールが完了したら、コマンドプロンプトを開いて以下のコマンドを実行して、Pythonが正しくインストールされたか確認します。
+
+```bash
+python --version
+``` 
+これでPythonのバージョンが表示されれば、インストールは成功です。
+
+### リモート環境での始め方
+
+リモート環境でPythonを使う場合、一般的にはSSH接続を利用してサーバーにアクセスします。以下の手順で進めます。
+
+
+
 ### 仮想環境の作成例
 ```powershell
 python -m venv venv
