@@ -38,7 +38,7 @@ Python の仮想環境（venv）は、プロジェクトごとに独立した Py
 
 ```powershell
 Set-Location C:\Users\harut\Documents\mydocs
-py -3 -m venv .venv
+python -m venv .venv
 ```
 
 ### 2. 仮想環境を有効化して pip を最新化
@@ -47,7 +47,7 @@ py -3 -m venv .venv
 & ".\.venv\Scripts\Activate.ps1"
 # ここで、先頭に (.venv) と表示されれば仮想環境が有効化されています
 # 次に、この仮想環境内の pip を最新化します
-pip install --upgrade pip
+python -m pip install --upgrade pip
 ```
 
 なお、仮想環境を無効化するには、以下のコマンドを実行します。

@@ -31,7 +31,13 @@ Pythonのインストール（ここでは主にWindowsに限って話を進め�
 
 - 標準ライブラリ + pip の導入
 
-“Add Python to PATH”にチェックを入れると、pythonのインストール先は
+このとき、二つのチェックボックスが表示されます。
+
+一つ目の“Use admin privilege when installing py.exe” については、管理者権限でインストールするかどうかの設定です。通常はチェックを入れなくても問題ありません。
+
+二つ目の“Add Python to PATH”については、絶対にチェックを入れてください。これにより、Pythonの実行ファイルとpipコマンドがWindowsの環境変数PATHに追加され、コマンドプロンプトから直接pythonやpipコマンドを実行できるようになります。
+
+pythonのインストール先は
 
 ``` bash
 C:\Users\<ユーザー名>\AppData\Local\Programs\Python\Python<バージョン>\
