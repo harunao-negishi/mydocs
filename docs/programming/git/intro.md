@@ -51,7 +51,13 @@ Git がどこに入っているか確認したいときは：
 where.exe git
 ```
 
-で確認できます。
+出力結果が、
+
+```
+C:\Program Files\Git\cmd\git.exe
+```
+
+のようになっていればOKです。
 
 その後はPCごとに一度だけ、ユーザー情報を設定します。
 
@@ -60,6 +66,14 @@ where.exe git
 git config --global user.name "あなたの名前"
 # メールアドレスの設定
 git config --global user.email "あなたのメールアドレス"
+```
+
+config の `--global` オプションは「このPC全体で共通の設定にする」という意味です。
+
+config の内容を確認したいときは：
+
+```powershell
+git config --global --list
 ```
 
 ---
@@ -81,6 +95,7 @@ Git + GitHub の使い方として、よく出てくるのは次の2パターン
 ```
 
 ### 共通で使う基本コマンド
+
 ```powershell
 # 現在の状況を確認（変更されたファイルの一覧など）
 git status
