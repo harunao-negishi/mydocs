@@ -45,6 +45,11 @@ nav:
     - トップページ: index.md
     - ノート: notes.md
     - プログラミング:
+      - Julia:
+          - はじめに: programming/julia/intro.md
+          - 使い方: programming/julia/usage.md
+          - パッケージ管理: programming/julia/packages.md
+          - Tips集: programming/julia/tips.md
       - MkDocs:
           - はじめに: programming/mkdocs/intro.md
           - 基本運用: programming/mkdocs/basics.md
@@ -64,8 +69,10 @@ nav:
           - 家／研究室ワークフロー: programming/git/workflow.md
       - Python:
           - はじめに: programming/python/intro.md
-          - 基本運用: programming/python/basics.md
           - 使い方: programming/python/usage.md
+          - 環境（env）: programming/python/env.md
+          - pip とパッケージ: programming/python/pip.md
+          - 仮想環境: programming/python/venv.md
           - Tips集: programming/python/tips.md
       - VS Code:
           - はじめに: programming/vscode/intro.md
